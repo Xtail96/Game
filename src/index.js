@@ -30,8 +30,8 @@ function initGameField() {
     canvas.style.display = 'block';
 
     let mapManager = new MapManager();
-    mapManager.loadMap('../src/resources/map.json');
-    //mapManager.draw(context);
+    mapManager.loadMap('/resources/map.json');
+    mapManager.draw(context);
 }
 
 function createGameMenu() {

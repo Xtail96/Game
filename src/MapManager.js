@@ -16,7 +16,9 @@ export default class MapManager{
     }
 
     parseMap(tilesJSON) {
+        console.log('start parsing');
         this.mapData = JSON.parse(tilesJSON);
+        //console.log(this.mapData);
         this.xCount = this.mapData.width;
         this.yCount = this.mapData.height;
         this.tSize.x = this.mapData.tilewidth;
@@ -24,14 +26,24 @@ export default class MapManager{
         this.mapSize.x = this.xCount * this.tSize.x;
         this.mapSize.y = this.yCount * this.tSize.y;
 
+        //console.log(this.mapData.tilesets);
         for(let i = 0; i < this.mapData.tilesets.length; i++) {
+            //console.log(i);
+            console.log(this.mapData.tilesets[i]);
             let img = new Image();
-            img.onload = function () {
+            //console.log(img);
+            console.log('load image');
+            this.imgLoadCount++;
+            if(this.imgLoadCount === this.mapData.tilesets.length) {
+                this.imgLoaded = true;
+            }
+            /*img.onload = function () {
+                console.log('load image');
                 this.imgLoadCount++;
                 if(this.imgLoadCount === this.mapData.tilesets.length) {
                     this.imgLoaded = true;
                 }
-            };
+            }.bind(this);*/
             let t = this.mapData.tilesets[i];
             img.src = t.image;
             let ts = {
@@ -43,6 +55,7 @@ export default class MapManager{
             };
             this.tilesets.push(ts);
         }
+        console.log(this.tilesets);
         this.jsonLoaded = true;
     }
 
@@ -63,10 +76,11 @@ export default class MapManager{
 
 
     draw(ctx) {
-        console.log('start draw');
-        if(!this.imgLoaded|| !this.jsonLoaded) {
+        console.log('start draw ' + this.imgLoaded + ' ' + this.jsonLoaded);
+        if(!this.imgLoaded || !this.jsonLoaded) {
             setTimeout(function () { this.draw(ctx); }.bind(this), 100);
         } else {
+            console.log('images and json loaded');
             if(this.tLayerSand === null) {
                 for(let id = 0; id < this.mapData.layers.length; id++) {
                     let layer = this.mapData.layers[id];
@@ -76,22 +90,26 @@ export default class MapManager{
                     }
                 }
 
-                for(let i = 0; i < this.tLayerSand.length; i++) {
+                for(let i = 0; i < this.tLayerSand.data.length; i++) {
                     if(this.tLayerSand.data[i] !== 0) {
                         let tile = this.getTile(this.tLayerSand.data[i]);
-                        let pX = (i % this.xCount);
-                        let pY = (i % this.yCount);
+                        //console.log(tile);
+                        let pX = (i % this.xCount) * this.tSize.x;
+                        let pY = Math.floor(i / this.xCount) * this.tSize.y;
 
-                        if(!this.isVisible(pX, pY, this.tSize.x, this.tSize.y)) {
+                        /*if(!this.isVisible(pX, pY, this.tSize.x, this.tSize.y)) {
                             continue;
                         }
 
                         pX -= this.view.x;
-                        pY -= this.view.y;
+                        pY -= this.view.y;*/
 
-
+                        console.log('draw');
+                        //console.log(tile.img);
+                        //console.log(tile.px + ' ' + tile.py);
                         ctx.drawImage(tile.img, tile.px, tile.py, this.tSize.x, this.tSize.y, pX, pY, this.tSize.x, this.tSize.y);
                     }
+
                 }
 
             }
@@ -125,7 +143,7 @@ export default class MapManager{
         return null;
     }
 
-    isVisible(x, t, width, height) {
+    isVisible(x, y, width, height) {
         if(x + width < this.view.x || y + height < this.view.y || x > this.view.x + this.view.w || y > this.view.y + this.view.h) {
             return false;
         } else {
