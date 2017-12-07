@@ -27,6 +27,9 @@ function initGameField() {
     canvas.style.border = '1px solid #333';
     canvas.style.backgroundColor = '#eee';
     canvas.style.display = 'block';
+
+    let mapManager = new MapManager().loadMap('resources/map.json');
+    mapManager.draw(document.createElement('canvas').getContext('2d'));
 }
 
 function createGameMenu() {
@@ -70,6 +73,5 @@ function createMenuButtons() {
     return buttons;
 }
 
-initGameMenu();
+//initGameMenu();
 initGameField();
-
