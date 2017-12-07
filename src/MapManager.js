@@ -15,52 +15,8 @@ export default class MapManager{
         console.log('Map Manager created');
     }
 
-    parseMap(tilesJSON) {
-        console.log('start parsing');
-        this.mapData = JSON.parse(tilesJSON);
-        //console.log(this.mapData);
-        this.xCount = this.mapData.width;
-        this.yCount = this.mapData.height;
-        this.tSize.x = this.mapData.tilewidth;
-        this.tSize.y = this.mapData.tileheight;
-        this.mapSize.x = this.xCount * this.tSize.x;
-        this.mapSize.y = this.yCount * this.tSize.y;
-
-        //console.log(this.mapData.tilesets);
-        for(let i = 0; i < this.mapData.tilesets.length; i++) {
-            //console.log(i);
-            console.log(this.mapData.tilesets[i]);
-            let img = new Image();
-            //console.log(img);
-            console.log('load image');
-            this.imgLoadCount++;
-            if(this.imgLoadCount === this.mapData.tilesets.length) {
-                this.imgLoaded = true;
-            }
-            /*img.onload = function () {
-                console.log('load image');
-                this.imgLoadCount++;
-                if(this.imgLoadCount === this.mapData.tilesets.length) {
-                    this.imgLoaded = true;
-                }
-            }.bind(this);*/
-            let t = this.mapData.tilesets[i];
-            img.src = t.image;
-            let ts = {
-                firstgid: t.firstgid,
-                image: img,
-                name: t.name,
-                xCount: Math.floor(t.imagewidth/this.tSize.x),
-                yCount: Math.floor(t.imageheight/this.tSize.y)
-            };
-            this.tilesets.push(ts);
-        }
-        console.log(this.tilesets);
-        this.jsonLoaded = true;
-    }
-
     loadMap(path) {
-        console.log('start load' + path);
+        console.log('start load = ' + path);
         let request = new XMLHttpRequest();
         request.onreadystatechange = function () {
             console.log('ready state = ' + request.readyState + '; status = ' + request.status);
@@ -72,6 +28,52 @@ export default class MapManager{
         }.bind(this);
         request.open('GET', path, true);
         request.send();
+
+        if(this.jsonLoaded && this.imgLoaded) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    parseMap(tilesJSON) {
+        console.log('start parsing');
+        this.mapData = JSON.parse(tilesJSON);
+        //console.log(this.mapData);
+        this.xCount = this.mapData.width;
+        this.yCount = this.mapData.height;
+        this.tSize.x = this.mapData.tilewidth;
+        this.tSize.y = this.mapData.tileheight;
+        this.mapSize.x = this.xCount * this.tSize.x;
+        this.mapSize.y = this.yCount * this.tSize.y;
+
+        for(let i = 0; i < this.mapData.tilesets.length; i++) {
+            let img = new Image();
+            console.log('new image has already created');
+            console.log(img.src);
+            img.onload = function () {
+                console.log('load image');
+                this.imgLoadCount++;
+                if(this.imgLoadCount === this.mapData.tilesets.length) {
+                    this.imgLoaded = true;
+                }
+            }.bind(this);
+
+            console.log(img);
+
+            let t = this.mapData.tilesets[i];
+            img.src = t.image;
+            let ts = {
+                firstgid: t.firstgid,
+                image: img,
+                name: t.name,
+                xCount: Math.floor(t.imagewidth/this.tSize.x),
+                yCount: Math.floor(t.imageheight/this.tSize.y)
+            };
+            this.tilesets.push(ts);
+        }
+        //console.log(this.tilesets);
+        this.jsonLoaded = true;
     }
 
 
@@ -82,6 +84,8 @@ export default class MapManager{
         } else {
             console.log('images and json loaded');
             if(this.tLayerSand === null) {
+                console.log('layers');
+                console.log(this.mapData.layers);
                 for(let id = 0; id < this.mapData.layers.length; id++) {
                     let layer = this.mapData.layers[id];
                     if(layer.type === 'tilelayer') {
@@ -89,6 +93,8 @@ export default class MapManager{
                         break;
                     }
                 }
+
+                console.log(this.tLayerSand.data.length);
 
                 for(let i = 0; i < this.tLayerSand.data.length; i++) {
                     if(this.tLayerSand.data[i] !== 0) {

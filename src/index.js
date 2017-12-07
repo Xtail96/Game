@@ -22,16 +22,21 @@ function initGameField() {
     document.body.appendChild(createGameField());
 
     let canvas = document.getElementById('gameField');
-    let context =canvas.getContext('2d');
+    let context = canvas.getContext('2d');
     canvas.width = 800;
     canvas.height = 600;
     canvas.style.border = '1px solid #333';
-    canvas.style.backgroundColor = '#eee';
+    //canvas.style.backgroundColor = '#eee';
     canvas.style.display = 'block';
 
     let mapManager = new MapManager();
-    mapManager.loadMap('/resources/map.json');
+    if(mapManager.loadMap('map.json')) {
+        mapManager.draw(context);
+    } else {
+        console.log('can not load map');
+    }
     mapManager.draw(context);
+
 }
 
 function createGameMenu() {
