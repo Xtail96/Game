@@ -73,16 +73,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 
 
-function component() {
+/*function component() {
     let element = document.createElement('div');
 
     // Lodash, now imported by this script
-    element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello', 'webpack'], ' ');
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
     return element;
 }
 
-document.body.appendChild(component());
+document.body.appendChild(component());*/
+
+
+let context = document.getElementById('gameField').getContext('2d');
+let width = 800, height = 600;
+context.width = width;
+context.height = height;
+context.style.border = '1px solid #333';
+context.style.backgroundColor = '#eee';
+
 
 
 /***/ }),
