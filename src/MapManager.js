@@ -1,52 +1,18 @@
-class MapManager{
-
-    mapData = null;
-    tLayerSand = null;
-    tLayerObjects = null;
-    xCount = 0;
-    yCount = 0;
-    tSize = { x : 64, y : 64};
-    mapSize = { x : 64, y : 64 };
-    tilesets = new Array();
-    imgLoadCount = 0;
-    imgLoaded = false;
-    jsonLoaded = false;
-    view = {x: 0, y: 0, w: 800, h: 600};
+export default class MapManager{
 
     constructor() {
-        alert('Map Manager constructor');
-    }
-
-    getMapData() {
-        return mapData;
-    }
-
-    getTLayerSand() {
-        return tLayerSand;
-    }
-
-    getTLayerObjects() {
-        return tLayerObjects;
-    }
-
-    getXCount() {
-        return xCount;
-    }
-
-    getYCount() {
-        return yCount;
-    }
-
-    getTSize() {
-        return tSize;
-    }
-
-    getMapSize() {
-        return mapSize;
-    }
-
-    getTilesets() {
-        return tilesets;
+        this.mapData = null;
+        this.tLayerSand = null;
+        this.xCount = 0;
+        this.yCount = 0;
+        this.tSize = { x : 64, y : 64};
+        this.mapSize = { x : 64, y : 64 };
+        this.tilesets = new Array();
+        this.imgLoadCount = 0;
+        this.imgLoaded = false;
+        this.jsonLoaded = false;
+        this.view = {x: 0, y: 0, w: 800, h: 600};
+        console.log('Map Manager created');
     }
 
     parseMap(tilesJSON) {
@@ -81,22 +47,25 @@ class MapManager{
     }
 
     loadMap(path) {
-        console.log(path);
+        console.log('start load' + path);
         let request = new XMLHttpRequest();
         request.onreadystatechange = function () {
+            console.log('ready state = ' + request.readyState + '; status = ' + request.status);
             if(request.readyState === 4 && request.status === 200) {
                 // получен корректный запрос
+                console.log('request is correct');
                 this.parseMap(request.responseText);
             }
-        };
+        }.bind(this);
         request.open('GET', path, true);
         request.send();
     }
 
 
     draw(ctx) {
+        console.log('start draw');
         if(!this.imgLoaded|| !this.jsonLoaded) {
-            setTimeout(function () { this.draw(ctx); }, 100);
+            setTimeout(function () { this.draw(ctx); }.bind(this), 100);
         } else {
             if(this.tLayerSand === null) {
                 for(let id = 0; id < this.mapData.layers.length; id++) {

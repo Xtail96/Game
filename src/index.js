@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import MapManager from './MapManager.js'
 
 /*function component() {
     let element = document.createElement('div');
@@ -28,8 +29,9 @@ function initGameField() {
     canvas.style.backgroundColor = '#eee';
     canvas.style.display = 'block';
 
-    let mapManager = new MapManager().loadMap('resources/map.json');
-    mapManager.draw(document.createElement('canvas').getContext('2d'));
+    let mapManager = new MapManager();
+    mapManager.loadMap('../src/resources/map.json');
+    //mapManager.draw(context);
 }
 
 function createGameMenu() {
@@ -73,5 +75,5 @@ function createMenuButtons() {
     return buttons;
 }
 
-//initGameMenu();
+initGameMenu();
 initGameField();
