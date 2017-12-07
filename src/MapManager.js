@@ -156,4 +156,26 @@ export default class MapManager{
             return true;
         }
     }
+
+    centerAt (x, y) {
+        if(x < this.view.w/2) {
+            this.view.x = 0;
+        } else {
+            if(x > this.mapSize.x - this.view.w/2) {
+                this.view.x = this.mapSize.x - this.view.w;
+            } else {
+                this.view.x = x - (this.view.w/2);
+            }
+        }
+
+        if(y < this.view.h/2) {
+            this.view.y = 0;
+        } else {
+            if(y > this.mapSize.y - this.view.h/2) {
+                this.view.y = this.mapSize.y - this.view.h;
+            } else {
+                this.view.y = y - (this.view.h/2);
+            }
+        }
+    }
 }

@@ -2,685 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b2d712e-0bbb-460d-9f0b-0e4acc76aaf1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/License.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_016.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_017.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_018.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_019.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_020.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_021.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_022.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_023.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_024.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_025.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_026.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_027.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_028.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_029.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_030.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_031.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_032.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_033.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_034.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_035.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_036.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_037.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_038.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_039.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_040.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_041.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_042.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_043.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_044.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_045.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_046.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_047.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_048.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_049.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_050.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_051.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_052.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_053.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_054.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_055.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_056.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_057.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_058.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_059.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_060.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_061.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_062.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_063.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_064.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_065.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_066.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_067.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_068.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_069.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_070.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_071.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_072.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_073.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_074.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_075.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_076.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_077.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_078.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_079.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_080.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_081.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_082.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_083.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_084.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_085.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_086.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_087.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_088.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_089.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_090.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_091.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_092.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_093.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_094.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_095.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_096.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_097.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_098.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_099.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_101.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_102.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_103.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_104.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_105.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_106.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_107.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_108.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_109.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_110.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_111.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_112.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_113.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_114.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_115.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_116.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_117.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_118.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_119.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_120.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_121.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_122.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_123.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_124.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_125.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Default size/fishTile_126.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_009.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_010.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_011.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_012.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_013.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_015.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_016.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_017.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_018.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_019.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_020.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_021.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_022.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_023.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_024.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_025.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_026.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_027.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_028.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_029.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_030.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_031.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_032.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_033.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_034.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_035.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_036.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_037.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_038.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_039.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_040.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_041.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_042.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_043.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_044.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_045.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_046.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_047.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_048.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_049.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_050.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_051.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_052.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_053.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_054.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_055.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_056.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_057.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_058.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_059.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_060.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_061.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_062.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_063.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_064.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_065.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_066.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_067.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_068.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_069.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_070.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_071.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_072.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_073.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_074.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_075.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_076.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_077.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_078.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_079.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_080.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_081.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_082.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_083.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_084.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_085.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_086.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_087.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_088.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_089.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_090.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_091.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_092.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_093.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_094.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_095.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_096.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_097.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_098.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_099.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_101.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_102.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_103.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_104.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_105.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_106.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_107.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_108.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_109.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_110.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_111.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_112.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_113.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_114.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_115.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_116.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_117.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_118.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_119.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_120.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_121.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_122.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_123.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_124.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_125.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/PNG/Retina/fishTile_126.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/Preview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/Sample.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/Spritesheet/fishSpritesheet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/Spritesheet/fishSpritesheet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/Spritesheet/fishSpritesheet@2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/Spritesheet/fishSpritesheet@2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/Tilesheet/fishTilesheet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/Tilesheet/fishTilesheet@2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/Vector/fishPack_vector.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_fishpack/Vector/fishPack_vector.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/License.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Effects/explosion1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Effects/explosion2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Effects/explosion3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Effects/fire1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Effects/fire2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/cannon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/cannonBall.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/cannonLoose.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/cannonMobile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/crew (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/crew (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/crew (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/crew (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/crew (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/crew (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/flag (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/flag (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/flag (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/flag (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/flag (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/flag (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/hullLarge (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/hullLarge (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/hullLarge (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/hullLarge (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/hullSmall (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/hullSmall (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/hullSmall (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/hullSmall (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/nest.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/pole.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (10).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (11).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (12).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (13).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (14).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (15).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (16).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (17).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (18).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (19).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (20).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (21).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (22).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (23).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (24).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (7).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (8).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailLarge (9).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (10).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (11).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (12).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (13).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (7).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (8).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/sailSmall (9).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/wood (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/wood (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/wood (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ship parts/wood (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/dinghyLarge1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/dinghyLarge2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/dinghyLarge3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/dinghySmall1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/dinghySmall2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/dinghySmall3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (10).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (11).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (12).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (13).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (14).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (15).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (16).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (17).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (18).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (19).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (20).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (21).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (22).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (23).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (24).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (7).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (8).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Ships/ship (9).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_07.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_08.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_09.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_23.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_24.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_25.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_26.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_27.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_29.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_30.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_31.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_33.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_34.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_35.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_36.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_37.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_38.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_39.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_40.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_41.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_42.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_43.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_44.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_45.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_46.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_47.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_49.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_50.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_51.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_52.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_53.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_54.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_55.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_56.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_57.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_58.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_59.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_60.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_61.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_62.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_63.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_64.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_65.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_66.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_67.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_68.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_69.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_70.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_71.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_72.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_73.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_74.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_75.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_76.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_77.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_78.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_79.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_80.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_81.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_82.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_83.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_84.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_85.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_86.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_87.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_88.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_89.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_90.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_91.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_92.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_93.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_94.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_95.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Default size/Tiles/tile_96.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Effects/explosion1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Effects/explosion2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Effects/explosion3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Effects/fire1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Effects/fire2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/cannon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/cannonBall.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/cannonLoose.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/cannonMobile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/crew (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/crew (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/crew (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/crew (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/crew (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/crew (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/flag (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/flag (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/flag (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/flag (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/flag (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/flag (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/hullLarge (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/hullLarge (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/hullLarge (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/hullLarge (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/hullSmall (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/hullSmall (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/hullSmall (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/hullSmall (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/nest.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/pole.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (10).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (11).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (12).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (13).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (14).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (15).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (16).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (17).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (18).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (19).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (20).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (21).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (22).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (23).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (24).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (7).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (8).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailLarge (9).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (10).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (11).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (12).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (13).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (7).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (8).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/sailSmall (9).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/wood (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/wood (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/wood (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ship parts/wood (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/dinghyLarge1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/dinghyLarge2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/dinghyLarge3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/dinghySmall1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/dinghySmall2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/dinghySmall3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (10).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (11).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (12).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (13).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (14).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (15).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (16).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (17).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (18).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (19).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (2).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (20).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (21).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (22).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (23).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (24).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (3).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (4).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (5).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (6).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (7).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (8).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Ships/ship (9).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_07.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_08.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_09.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_23.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_24.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_25.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_26.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_27.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_29.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_30.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_31.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_33.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_34.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_35.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_36.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_37.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_38.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_39.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_40.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_41.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_42.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_43.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_44.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_45.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_46.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_47.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_49.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_50.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_51.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_52.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_53.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_54.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_55.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_56.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_57.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_58.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_59.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_60.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_61.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_62.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_63.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_64.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_65.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_66.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_67.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_68.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_69.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_70.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_71.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_72.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_73.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_74.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_75.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_76.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_77.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_78.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_79.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_80.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_81.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_82.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_83.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_84.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_85.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_86.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_87.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_88.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_89.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_90.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_91.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_92.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_93.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_94.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_95.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/PNG/Retina/Tiles/tile_96.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Preview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Preview_KenneyNL.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Sample.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Spritesheet/shipsMiscellaneous_sheet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Spritesheet/shipsMiscellaneous_sheet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Spritesheet/shipsMiscellaneous_sheet@2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Spritesheet/shipsMiscellaneous_sheet@2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Tilesheet/tiles_sheet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Tilesheet/tiles_sheet@2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Tilesheet/tilesheets.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Vector/shipsMiscellaneous_vector.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Vector/shipsMiscellaneous_vector.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Vector/tile_vector.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/images/kenney_piratepack/Vector/tiles_vector.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/map.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/resources/map.tmx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MapManager.js" afterPath="$PROJECT_DIR$/src/MapManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -724,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
+            <state relative-caret-position="-119">
               <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -736,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapManager.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MapManager.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MapManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="400">
+              <caret line="179" column="5" lean-forward="false" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -777,8 +100,8 @@
         <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/src/mapManager.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/MapManager.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/MapManager.js" />
       </list>
     </option>
   </component>
@@ -882,12 +205,12 @@
       <workItem from="1512486614166" duration="952000" />
       <workItem from="1512487759894" duration="9979000" />
       <workItem from="1512657907047" duration="15756000" />
-      <workItem from="1512683296649" duration="1384000" />
+      <workItem from="1512683296649" duration="1890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31169000" />
+    <option name="totallyTimeSpent" value="31675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1068,6 +391,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,14 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1116,11 +432,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
+        <state relative-caret-position="-119">
           <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MapManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="179" column="5" lean-forward="false" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
