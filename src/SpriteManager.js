@@ -22,7 +22,7 @@ export default class SpriteManager {
 
     loadImg(imgName) {
         this.image.onload = function () {
-            this.imageLoaded = true;
+            this.imgLoaded = true;
         }.bind(this);
         this.image.src = imgName;
     }
@@ -36,9 +36,9 @@ export default class SpriteManager {
         this.jsonLoaded = true;
     }
 
-    drawSprite(ctx, name, x, y) {
+    drawSprite(ctx, name, x, y, size = 1) {
         if(!this.imgLoaded || !this.jsonLoaded) {
-            setTimeout(function () { this.drawSprite(ctx, name , x, y); }.bind(this), 100);
+            setTimeout(function () { this.drawSprite(ctx, name , x, y, size); }.bind(this), 100);
         } else {
             let sprite = this.getSprite(name);
             if(!this.mapManager.isVisible(x, y, sprite.w, sprite.h)) {

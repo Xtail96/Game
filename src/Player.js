@@ -1,8 +1,8 @@
 import Entity from "./Entity"
 
 export default class Player extends Entity{
-    constructor() {
-        super();
+    constructor(spriteManager) {
+        super(spriteManager);
         this.healthpoints = 100;
         this.speed = 1;
     }
@@ -13,7 +13,7 @@ export default class Player extends Entity{
 
 
     draw(ctx) {
-        this.spriteManager.draw(ctx, "player_img", this.pos_x, this.pos_y);
+        this.spriteManager.drawSprite(ctx, '0', this.pos_x, this.pos_y, this.size);
     }
 
 }

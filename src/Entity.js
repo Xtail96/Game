@@ -11,24 +11,34 @@ export default class Entity {
         this.speed = 0;
     }
 
-    findAim() {
+    step(target_x, target_y) {
+        if(target_x > this.pos_x) {
+            this.pos_x += 1 + this.speed;
+        } else {
+            if(target_x < this.pos_x) {
+                this.pos_x -= 1 + this.speed;
+            }
+        }
 
-    }
-
-    findPath() {
-
-    }
-
-    step() {
-
-    }
-
-    draw(ctx) {
-
+        if(target_y > this.pos_y) {
+            this.pos_y += 1 + this.speed;
+        } else {
+            if(target_y < this.pos_y) {
+                this.pos_y -= 1 + this.speed;
+            }
+        }
     }
 
     onTouchEntity (obj) {
-
+        if(this.size / 4 > obj.size) {
+            this.size *= obj.size / 8;
+            obj.kill();
+        } else {
+            if(this.size / 4 < obj.size) {
+                obj.size *= this.size / 8;
+                this.kill();
+            }
+        }
     }
 
     kill() {

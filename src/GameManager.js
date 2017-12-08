@@ -10,12 +10,13 @@ export default class GameManager{
 
         this.factory = {};
         this.entities = [];
-        this.player = null;
         this.laterKill = [];
 
         this.mapManager = new MapManager();
         this.eventsManager = new EventsManager();
         this.spriteManager = new SpriteManager(this.mapManager);
+
+        this.player = new Player(this.spriteManager);
     }
 
     initPlayer(obj) {
@@ -27,10 +28,11 @@ export default class GameManager{
     }
 
     update() {
-        console.log('update game manager');
+        //console.log('update game manager');
         if(this.player === null) {
             return;
         } else {
+            console.log('player exist');
             this.player.move_x = 0;
             this.player.move_y = 0;
 
@@ -57,6 +59,7 @@ export default class GameManager{
 
             this.mapManager.draw(this.ctx);
             this.mapManager.centerAt(this.player.pos_x, this.player.pos_y);
+            this.player.draw(this.ctx);
             this.draw(this.ctx);
         }
 
@@ -70,9 +73,9 @@ export default class GameManager{
 
     loadAll() {
         this.mapManager.loadMap('map.json');
-        this.spriteManager.loadAtlas('atlas.json', 'image.png');
+        this.spriteManager.loadAtlas('atlas.json', 'images/spritesheets/spritesheet.png');
 
-        //this.factory['Player'] = this.player;
+        this.factory['Player'] = this.player;
         //this.factory['Food'] =
         this.mapManager.draw(this.ctx);
         this.eventsManager.setup(this.canvas);
