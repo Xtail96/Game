@@ -1,5 +1,7 @@
 import _ from 'lodash'
-import MapManager from './MapManager.js'
+//import MapManager from './MapManager.js'
+
+import GameManager from "./GameManager"
 
 /*function component() {
     let element = document.createElement('div');
@@ -29,13 +31,13 @@ function initGameField() {
     //canvas.style.backgroundColor = '#eee';
     canvas.style.display = 'block';
 
-    let mapManager = new MapManager();
+    /*let mapManager = new MapManager();
     if(mapManager.loadMap('map.json')) {
         mapManager.draw(context);
     } else {
         console.log('can not load map');
     }
-    mapManager.draw(context);
+    mapManager.draw(context);*/
 
 }
 
@@ -80,5 +82,8 @@ function createMenuButtons() {
     return buttons;
 }
 
-initGameMenu();
-initGameField();
+//initGameMenu();
+//initGameField();
+
+let gameManager = new GameManager();
+gameManager.play();
