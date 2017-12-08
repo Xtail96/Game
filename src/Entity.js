@@ -12,6 +12,13 @@ export default class Entity {
     }
 
     step(target_x, target_y) {
+        //console.log(target_x + ' ' + target_y);
+        //console.log(this.pos_x + ' ' + this.pos_y);
+        if(target_x < 0 || target_y < 0)
+        {
+            return;
+        }
+
         if(target_x > this.pos_x) {
             this.pos_x += 1 + this.speed;
         } else {
@@ -27,6 +34,10 @@ export default class Entity {
                 this.pos_y -= 1 + this.speed;
             }
         }
+    }
+
+    stopMove() {
+        this.step(this.pos_x, this.pos_y);
     }
 
     onTouchEntity (obj) {

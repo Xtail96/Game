@@ -178,4 +178,10 @@ export default class MapManager{
             }
         }
     }
+
+    update(ctx, player_pos_x, player_pos_y) {
+        ctx.clearRect(0, 0, this.view.w, this.view.h);
+        this.draw(this.ctx);
+        this.centerAt(player_pos_x, player_pos_y);
+    }
 }

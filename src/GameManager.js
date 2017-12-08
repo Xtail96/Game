@@ -13,7 +13,7 @@ export default class GameManager{
         this.laterKill = [];
 
         this.mapManager = new MapManager();
-        this.eventsManager = new EventsManager();
+        this.eventsManager = new EventsManager(this.canvas);
         this.spriteManager = new SpriteManager(this.mapManager);
 
         this.player = new Player(this.spriteManager);
@@ -28,17 +28,35 @@ export default class GameManager{
     }
 
     update() {
+
         //console.log('update game manager');
         if(this.player === null) {
             return;
         } else {
-            console.log('player exist');
+            //console.log('player exist');
             this.player.move_x = 0;
             this.player.move_y = 0;
 
-            if(this.eventsManager.actionCursorPositionChanged()) {
-                this.player.step();
+            if(this.eventsManager.onMousePressed || this.eventsManager.cursorPositionChanged) {
+                this.player.move_x = this.eventsManager.mouse_x - 32;
+                this.player.move_y = this.eventsManager.mouse_y - 32;
+                this.player.step(this.player.move_x, this.player.move_y);
+            } else {
+                this.player.move_x = -1;
+                this.player.move_y = -1;
+                this.player.step(this.player.move_x, this.player.move_y);
             }
+
+            /*if(this.eventsManager.actions[0]) {
+                //console.log('move to = ' + this.eventsManager.mouse_x + this.eventsManager.mouse_y);
+                this.player.move_x = this.eventsManager.mouse_x;
+                this.player.move_y = this.eventsManager.mouse_y;
+                this.player.step(this.player.move_x, this.player.move_y);
+            }
+
+            if(this.eventsManager.actions[1]) {
+                this.player.stopMove();
+            }*/
 
             this.entities.forEach(function (e) {
                 try {
@@ -57,6 +75,7 @@ export default class GameManager{
                 this.laterKill.length = 0;
             }
 
+            //this.ctx.clearRect(this.player.pos_x - 64, this.player.pos_y - 64, this.player.pos_x + 64, this.player.pos_y + 64);
             this.mapManager.draw(this.ctx);
             this.mapManager.centerAt(this.player.pos_x, this.player.pos_y);
             this.player.draw(this.ctx);
@@ -78,13 +97,13 @@ export default class GameManager{
         this.factory['Player'] = this.player;
         //this.factory['Food'] =
         this.mapManager.draw(this.ctx);
-        this.eventsManager.setup(this.canvas);
+        this.eventsManager.setup();
 
     }
 
     play() {
         //setInterval(updateWorld, 100);
         //setInterval(this.update(), 100).bind(this);
-        setInterval(function () { this.update(); }.bind(this), 100);
+        setInterval(function () { this.update(); }.bind(this), 10);
     }
 }
