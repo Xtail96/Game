@@ -39,6 +39,10 @@ function initGameField() {
     }
     mapManager.draw(context);*/
 
+    let gameManager = new GameManager(canvas, context);
+    gameManager.loadAll();
+    gameManager.play();
+
 }
 
 function createGameMenu() {
@@ -82,8 +86,5 @@ function createMenuButtons() {
     return buttons;
 }
 
-//initGameMenu();
-//initGameField();
-
-let gameManager = new GameManager();
-gameManager.play();
+initGameMenu();
+initGameField();

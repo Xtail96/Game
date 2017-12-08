@@ -8,7 +8,6 @@ export default class GameManager{
         this.canvas = canvas;
         this.ctx = ctx;
 
-
         this.factory = {};
         this.entities = [];
         this.player = null;
@@ -16,7 +15,7 @@ export default class GameManager{
 
         this.mapManager = new MapManager();
         this.eventsManager = new EventsManager();
-        this.spriteManager = new SpriteManager();
+        this.spriteManager = new SpriteManager(this.mapManager);
     }
 
     initPlayer(obj) {
