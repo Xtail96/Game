@@ -159,7 +159,11 @@ export default class GameManager{
             let enemyName = 'Enemy' + i;
 
             this.entities.push(this.factory[enemyName] =
-                new Enemy(this.spriteManager, rand_x, rand_y, enemyName, this.enemyGrowIncrement, this.enemyMaxSize));
+                new Enemy(this.spriteManager, rand_x, rand_y, enemyName, this.enemyGrowIncrement, this.enemyMaxSize, generateEnemiesSpriteNumber()));
+        }
+
+        function generateEnemiesSpriteNumber() {
+            return (Math.floor(Math.random() * 3 + 2)).toString();
         }
     }
 

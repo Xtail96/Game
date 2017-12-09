@@ -11,12 +11,13 @@ export default class Player extends Entity{
         this.name = 'Player';
         this.growIncrement = growIncrement;
         this.maxSize = maxSize;
+        this.spriteNumber = '0';
     }
 
 
-    draw(ctx) {
-        this.spriteManager.drawSprite(ctx, '0', this.pos_x, this.pos_y, this.size);
-    }
+    /*draw(ctx) {
+        this.spriteManager.drawSprite(ctx, this.spriteNumber, this.pos_x, this.pos_y, this.size);
+    }*/
 
     update(gameManager) {
         //console.log('updatePlayer');

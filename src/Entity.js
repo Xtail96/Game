@@ -10,6 +10,7 @@ export default class Entity {
         this.size = 1;
         this.speed = 0;
         this.name = 'undefined';
+        this.spriteNumber = 'undefined';
     }
 
     step(target_x, target_y) {
@@ -34,6 +35,13 @@ export default class Entity {
                 this.pos_y -= 1 + this.speed;
             }
         }
+    }
+
+    draw(ctx) {
+        /*if(this.name !== 'Player' && this.name !== 'Plant') {
+            console.log(this.spriteNumber);
+        }*/
+        this.spriteManager.drawSprite(ctx, this.spriteNumber, this.pos_x, this.pos_y, this.size);
     }
 
     kill(gameManager) {

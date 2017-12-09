@@ -1,7 +1,7 @@
 import Entity from "./Entity"
 
 export default class Enemy extends Entity{
-    constructor(spriteManager, x, y, name, growIncrement = 1/5, maxSize = 10) {
+    constructor(spriteManager, x, y, name, growIncrement = 1/5, maxSize = 10, spriteNumber = '2') {
         super(spriteManager);
         this.healthpoints = 100;
         this.speed = 1;
@@ -12,7 +12,15 @@ export default class Enemy extends Entity{
         this.target = null;
         this.growIncrement = growIncrement;
         this.maxSize = maxSize;
+        //this.spriteNumber = this.generateSpriteNumber();
+        this.spriteNumber = spriteNumber;
     }
+
+    /*draw(ctx) {
+        //console.log(this.spriteNumber);
+        this.spriteManager.drawSprite(ctx, this.spriteNumber, this.pos_x, this.pos_y, this.size);
+        //this.spriteManager.drawSprite(ctx, '2', this.pos_x, this.pos_y, this.size);
+    }*/
 
     findTarget(gameManager) {
         if(this.target === null || !this.targetExists(gameManager)) {
@@ -43,13 +51,7 @@ export default class Enemy extends Entity{
         return false;
     }
 
-    draw(ctx) {
-        this.spriteManager.drawSprite(ctx, '2', this.pos_x, this.pos_y, this.size);
-    }
-
     update(gameManager) {
-
-
         //console.log(e.pos_x + ' ' + e.pos_y);
 
         this.findTarget(gameManager);
