@@ -108,6 +108,7 @@ export default class GameManager{
                 }
                 this.laterKill.length = 0;
             }
+            this.updateDashboard();
             this.draw();
         }
     }
@@ -182,5 +183,12 @@ export default class GameManager{
             }
         }
         return counter;
+    }
+
+    updateDashboard() {
+        document.getElementById('playerSize').setAttribute('value', this.player.size);
+        document.getElementById('targetPlayerSize').setAttribute('value', this.targetPlayerSize);
+        document.getElementById('plantCount').setAttribute('value', this.plantCount);
+        document.getElementById('enemyCount').setAttribute('value', this.enemyCount);
     }
 }

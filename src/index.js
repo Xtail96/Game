@@ -103,7 +103,7 @@ function createDashboard() {
     elements.push(playerSizeLabel);
 
     let playerSize = document.createElement('input');
-    playerSize.id = 'playerSizeLabel';
+    playerSize.id = 'playerSize';
     playerSize.setAttribute('type', 'text');
     playerSize.setAttribute('readonly', '');
     playerSize.setAttribute('value', '0');
