@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b2d712e-0bbb-460d-9f0b-0e4acc76aaf1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Plant.js" afterPath="$PROJECT_DIR$/src/Plant.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plant.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Plant.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Plant.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="315">
+              <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -159,11 +159,11 @@
         <option value="$PROJECT_DIR$/src/SpriteManager.js" />
         <option value="$PROJECT_DIR$/src/Enemy.js" />
         <option value="$PROJECT_DIR$/src/MapManager.js" />
-        <option value="$PROJECT_DIR$/src/Plant.js" />
         <option value="$PROJECT_DIR$/src/Entity.js" />
         <option value="$PROJECT_DIR$/src/Player.js" />
         <option value="$PROJECT_DIR$/src/GameManager.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/Plant.js" />
       </list>
     </option>
   </component>
@@ -271,12 +271,12 @@
       <workItem from="1512683296649" duration="2148000" />
       <workItem from="1512717958256" duration="9284000" />
       <workItem from="1512745890978" duration="10740000" />
-      <workItem from="1512803228970" duration="25328000" />
+      <workItem from="1512803228970" duration="25602000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77285000" />
+    <option name="totallyTimeSpent" value="77559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -581,18 +581,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Plant.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Enemy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="188" column="84" lean-forward="false" selection-start-line="188" selection-start-column="84" selection-end-line="188" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="175" column="49" lean-forward="true" selection-start-line="175" selection-start-column="49" selection-end-line="175" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -613,20 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameManager.js">
+    <entry file="file://$PROJECT_DIR$/src/Plant.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="188" column="84" lean-forward="false" selection-start-line="188" selection-start-column="84" selection-end-line="188" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="175" column="49" lean-forward="true" selection-start-line="175" selection-start-column="49" selection-end-line="175" selection-end-column="49" />
+        <state relative-caret-position="315">
+          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
           <folding />
         </state>
       </provider>

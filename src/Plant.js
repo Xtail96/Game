@@ -14,4 +14,10 @@ export default class Plant extends Entity{
     draw(ctx) {
         this.spriteManager.drawSprite(ctx, '1', this.pos_x, this.pos_y, this.size);
     }
+
+    /*onTouchEntity (obj, gameManager) {
+        if(this.size <= obj.size) {
+            this.kill(gameManager);
+        }
+    }*/
 }
