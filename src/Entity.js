@@ -36,12 +36,12 @@ export default class Entity {
     }
 
     onTouchEntity (obj) {
-        if(this.size / 4 > obj.size) {
-            this.size *= obj.size / 8;
+        if(this.size / 2 > obj.size) {
+            this.size *= obj.size / 4;
             obj.kill();
         } else {
-            if(this.size / 4 < obj.size) {
-                obj.size *= this.size / 8;
+            if(this.size / 2 < obj.size) {
+                obj.size *= this.size / 4;
                 this.kill();
             }
         }

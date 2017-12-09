@@ -5,7 +5,7 @@ export default class Player extends Entity{
         super(spriteManager);
         this.healthpoints = 100;
         this.speed = 1;
-        this.size = 5;
+        this.size = 1;
     }
 
 

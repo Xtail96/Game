@@ -7,7 +7,7 @@ export default class Plant extends Entity{
         this.speed = 0;
         this.pos_x = x;
         this.pos_y = y;
-        this.size = 1;
+        this.size = 0.5;
     }
 
     draw(ctx) {
