@@ -93,29 +93,26 @@ export default class MapManager{
                         break;
                     }
                 }
+            }
+            for(let i = 0; i < this.tLayerSand.data.length; i++) {
+                if(this.tLayerSand.data[i] !== 0) {
+                    let tile = this.getTile(this.tLayerSand.data[i]);
+                    //console.log(tile);
+                    let pX = (i % this.xCount) * this.tSize.x;
+                    let pY = Math.floor(i / this.xCount) * this.tSize.y;
 
-                //console.log(this.tLayerSand.data.length);
-
-                for(let i = 0; i < this.tLayerSand.data.length; i++) {
-                    if(this.tLayerSand.data[i] !== 0) {
-                        let tile = this.getTile(this.tLayerSand.data[i]);
-                        //console.log(tile);
-                        let pX = (i % this.xCount) * this.tSize.x;
-                        let pY = Math.floor(i / this.xCount) * this.tSize.y;
-
-                        /*if(!this.isVisible(pX, pY, this.tSize.x, this.tSize.y)) {
-                            continue;
-                        }
-
-                        pX -= this.view.x;
-                        pY -= this.view.y;*/
-
-                        //console.log('draw');
-                        //console.log(tile.img);
-                        //console.log(tile.px + ' ' + tile.py);
-                        ctx.drawImage(tile.img, tile.px, tile.py, this.tSize.x, this.tSize.y, pX, pY, this.tSize.x, this.tSize.y);
+                    if(!this.isVisible(pX, pY, this.tSize.x, this.tSize.y)) {
+                        continue;
                     }
 
+                    pX -= this.view.x;
+                    pY -= this.view.y;
+
+                    //console.log('draw');
+                    //console.log(tile.img);
+                    //console.log(pX + ' ' + pY);
+                    ctx.drawImage(tile.img, tile.px, tile.py, this.tSize.x, this.tSize.y, pX, pY, this.tSize.x, this.tSize.y);
+                    //ctx.drawImage(tile.img, tile.px, tile.py, this.tSize.x, this.tSize.y, this.view.x + pX, this.view.y + pY, this.tSize.x, this.tSize.y);
                 }
 
             }
@@ -177,11 +174,12 @@ export default class MapManager{
                 this.view.y = y - (this.view.h/2);
             }
         }
+        //console.log(this.view.x + ' ' + this.view.y);
     }
 
     update(ctx, player_pos_x, player_pos_y) {
         ctx.clearRect(0, 0, this.view.w, this.view.h);
-        this.draw(this.ctx);
+        this.draw(ctx);
         this.centerAt(player_pos_x, player_pos_y);
     }
 }

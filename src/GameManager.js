@@ -35,9 +35,10 @@ export default class GameManager{
             this.player.move_y = 0;
 
             if(this.eventsManager.cursorPositionChanged) {
-                this.player.move_x = this.eventsManager.mouse_x - 32;
-                this.player.move_y = this.eventsManager.mouse_y - 64;
+                this.player.move_x = this.mapManager.view.x + this.eventsManager.mouse_x - 32;
+                this.player.move_y = this.mapManager.view.y + this.eventsManager.mouse_y - 64;
                 this.player.step(this.player.move_x, this.player.move_y);
+                //console.log(this.player.pos_x + ' ' + this.player.pos_y);
             }
 
             this.entities.forEach(function (e) {
@@ -57,9 +58,9 @@ export default class GameManager{
                 this.laterKill.length = 0;
             }
 
-            //this.ctx.clearRect(this.player.pos_x - 64, this.player.pos_y - 64, this.player.pos_x + 64, this.player.pos_y + 64);
+            //this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            this.mapManager.centerAt(this.player.pos_x, this.player.pos_y);
             this.mapManager.draw(this.ctx);
-            //this.mapManager.centerAt(this.player.pos_x, this.player.pos_y);
             this.player.draw(this.ctx);
             this.draw(this.ctx);
         }
