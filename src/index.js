@@ -1,7 +1,7 @@
 import _ from 'lodash'
 //import MapManager from './MapManager.js'
 
-import GameManager from "./GameManager"
+import LevelManager from "./LevelManager"
 
 /*function component() {
     let element = document.createElement('div');
@@ -41,9 +41,8 @@ function initGameField() {
 
     initGameMenu(canvas.width);
 
-    let gameManager = new GameManager(canvas, context, canvas.width, canvas.height, 10, 100, 5, 1/10, 1/25, 5, 7, 3);
-    gameManager.loadAll();
-    gameManager.play();
+    let levelManager = new LevelManager(canvas, context);
+    levelManager.startLevel();
 
 }
 
