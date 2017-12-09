@@ -7,9 +7,13 @@ import Plant from "./Plant";
 import Enemy from "./Enemy"
 
 export default class GameManager{
-    constructor(canvas, ctx) {
+    constructor(canvas, ctx, plantsCount = 100, enemyCount = 10, enemyLimit = 10) {
         this.canvas = canvas;
         this.ctx = ctx;
+
+        this.plantCount = plantsCount;
+        this.enemyCount = enemyCount;
+        this.enemyLimit = enemyLimit;
 
         this.factory = {};
         this.entities = [];
@@ -46,6 +50,16 @@ export default class GameManager{
                 this.player.step(this.player.move_x, this.player.move_y);
                 //console.log(this.player.pos_x + ' ' + this.player.pos_y);
             }
+
+            this.plantCount = this.getPlantCount();
+            this.enemyCount = this.getEnemyCount();
+            if(this.plantCount <= this.enemyCount) {
+                this.generatePlants(this.enemyCount);
+            }
+            if(this.enemyCount < this.enemyLimit) {
+                this.generateEnemies(1);
+            }
+            console.log(this.plantCount + ' ' + this.enemyCount);
 
             this.entities.forEach(function (e) {
                 try {
@@ -89,8 +103,8 @@ export default class GameManager{
         this.factory['Player'] = this.player;
         this.entities.push(this.player);
 
-        this.generatePlants(100);
-        this.generateEnemies(10);
+        this.generatePlants(this.plantCount);
+        this.generateEnemies(this.enemyCount);
 
         this.eventsManager.setup();
 
@@ -118,5 +132,28 @@ export default class GameManager{
 
             this.entities.push(this.factory[enemyName] = new Enemy(this.spriteManager, rand_x, rand_y, enemyName));
         }
+    }
+
+    getPlantCount() {
+        let counter = 0;
+        for(let i = 0; i < this.entities.length; i++) {
+            let e = this.entities[i];
+            if(e.name === 'Plant') {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    getEnemyCount() {
+        let counter = 0;
+        for(let i = 0; i < this.entities.length; i++)
+        {
+            let e = this.entities[i];
+            if(e.name !== 'Plant' && e.name !== 'Player') {
+                counter++;
+            }
+        }
+        return counter;
     }
 }
