@@ -2,6 +2,7 @@ import EventsManager from "./EventsManager";
 import MapManager from "./MapManager";
 import SpriteManager from "./SpriteManager";
 import Player from "./Player"
+import Plant from "./Plant";
 
 export default class GameManager{
     constructor(canvas, ctx) {
@@ -57,17 +58,16 @@ export default class GameManager{
             if(this.laterKill.length > 0) {
                 this.laterKill.length = 0;
             }
-
-            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-            this.mapManager.centerAt(this.player.pos_x, this.player.pos_y);
-            this.mapManager.draw(this.ctx);
-            this.player.draw(this.ctx);
-            this.draw(this.ctx);
+            this.draw();
         }
 
     }
 
     draw() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.mapManager.centerAt(this.player.pos_x, this.player.pos_y);
+        this.mapManager.draw(this.ctx);
+
         for(let i = 0; i < this.entities.length; i++) {
             this.entities[i].draw(this.ctx);
         }
@@ -78,8 +78,10 @@ export default class GameManager{
         this.spriteManager.loadAtlas('atlas.json', 'images/spritesheets/spritesheet.png');
 
         this.factory['Player'] = this.player;
-        //this.factory['Food'] =
-        this.mapManager.draw(this.ctx);
+        this.entities.push(this.player);
+
+        this.generatePlants(100);
+
         this.eventsManager.setup();
 
     }
@@ -88,5 +90,14 @@ export default class GameManager{
         //setInterval(updateWorld, 100);
         //setInterval(this.update(), 100).bind(this);
         setInterval(function () { this.update(); }.bind(this), 10);
+    }
+
+    generatePlants(count) {
+        for(let i = 0; i < count; i++) {
+            let rand_x = Math.floor(Math.random() * 3100 + 1);
+            let rand_y = Math.floor(Math.random() * 3100 + 1);
+
+            this.entities.push(this.factory['Plant'] = new Plant(this.spriteManager, rand_x, rand_y));
+        }
     }
 }
