@@ -8,6 +8,7 @@ export default class Plant extends Entity{
         this.pos_x = x;
         this.pos_y = y;
         this.size = 0.5;
+        this.name = 'Plant';
     }
 
     draw(ctx) {

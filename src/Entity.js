@@ -5,10 +5,11 @@ export default class Entity {
         this.spriteManager = spriteManager;
         this.pos_x = 0;
         this.pos_y = 0;
-        this.size_x = 0;
-        this.size_y = 0;
+        this.size_x = 64;
+        this.size_y = 64;
         this.size = 1;
         this.speed = 0;
+        this.name = 'undefined';
     }
 
     step(target_x, target_y) {
@@ -35,20 +36,30 @@ export default class Entity {
         }
     }
 
-    onTouchEntity (obj) {
-        if(this.size / 2 > obj.size) {
-            this.size *= obj.size / 4;
-            obj.kill();
+    onTouchEntity (obj, gameManager) {
+        //console.log('touch');
+        if(this.size / 2 >= obj.size) {
+            //console.log('kill obj');
+            let sizeOffset = obj.size/2;
+            this.size += sizeOffset;
+            this.size_x += sizeOffset;
+            this.size_y += sizeOffset;
+            obj.kill(gameManager);
         } else {
-            if(this.size / 2 < obj.size) {
-                obj.size *= this.size / 4;
-                this.kill();
+            if(this.size / 2 <= obj.size) {
+                let sizeOffset = obj.size/2;
+                //console.log('kill this');
+                obj.size += sizeOffset;
+                obj.size_x += sizeOffset;
+                onj.size_y += sizeOffset;
+                this.kill(gameManager);
             }
+            //console.log('undefined touch');
         }
     }
 
-    kill() {
-
-
+    kill(gameManager) {
+        console.log('kill ' + this.name);
+        gameManager.laterKill.push(this);
     }
 }

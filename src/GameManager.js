@@ -1,6 +1,7 @@
 import EventsManager from "./EventsManager";
 import MapManager from "./MapManager";
 import SpriteManager from "./SpriteManager";
+import PhysicManager from "./PhysicManager";
 import Player from "./Player"
 import Plant from "./Plant";
 
@@ -16,6 +17,7 @@ export default class GameManager{
         this.mapManager = new MapManager();
         this.eventsManager = new EventsManager(this.canvas);
         this.spriteManager = new SpriteManager(this.mapManager);
+        this.physicManager = new PhysicManager();
 
         this.player = new Player(this.spriteManager);
     }
@@ -36,17 +38,17 @@ export default class GameManager{
             this.player.move_y = 0;
 
             if(this.eventsManager.cursorPositionChanged) {
-                this.player.move_x = this.mapManager.view.x + this.eventsManager.mouse_x - 32;
-                this.player.move_y = this.mapManager.view.y + this.eventsManager.mouse_y - 64;
+                this.player.move_x = this.mapManager.view.x + this.eventsManager.mouse_x;
+                this.player.move_y = this.mapManager.view.y + this.eventsManager.mouse_y;
                 this.player.step(this.player.move_x, this.player.move_y);
                 //console.log(this.player.pos_x + ' ' + this.player.pos_y);
             }
 
             this.entities.forEach(function (e) {
                 try {
-                    e.update();
+                    e.update(this);
                 } catch (ex) {}
-            });
+            }.bind(this));
 
             for(let i = 0; i < this.laterKill.length; i++) {
                 let idx = this.entities.indexOf(this.laterKill[i]);
@@ -60,7 +62,6 @@ export default class GameManager{
             }
             this.draw();
         }
-
     }
 
     draw() {
@@ -87,7 +88,7 @@ export default class GameManager{
     }
 
     play() {
-        setInterval(function () { this.update(); }.bind(this), 10);
+        setInterval(function () { this.update(); }.bind(this), 25);
     }
 
     generatePlants(count) {
