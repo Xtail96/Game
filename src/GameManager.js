@@ -17,7 +17,8 @@ export default class GameManager{
                 enemyGrowIncrement = 1/3,
                 playerMaxSize = 3,
                 enemyMaxSize = 5,
-                targetPlayerSize = 2.5) {
+                targetPlayerSize = 2.5,
+                map = 'map.json') {
         this.canvas = canvas;
         this.ctx = ctx;
         this.canvasWidth = canvasWidth;
@@ -43,6 +44,7 @@ export default class GameManager{
         this.physicManager = new PhysicManager();
 
         this.player = new Player(this.spriteManager, this.playerGrowIncrement, this.playerMaxSize);
+        this.map = map;
     }
 
     initPlayer(obj) {
@@ -124,7 +126,7 @@ export default class GameManager{
     }
 
     loadAll() {
-        this.mapManager.loadMap('map.json');
+        this.mapManager.loadMap(this.map);
         this.spriteManager.loadAtlas('atlas.json', 'images/spritesheets/spritesheet.png');
 
         this.factory['Player'] = this.player;
