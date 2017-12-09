@@ -39,7 +39,7 @@ function initGameField() {
     }
     mapManager.draw(context);*/
 
-    let gameManager = new GameManager(canvas, context, canvas.width, canvas.height, 10, 100, 10);
+    let gameManager = new GameManager(canvas, context, canvas.width, canvas.height, 10, 100, 5, 1/10, 1, 5, 7, 3);
     gameManager.loadAll();
     gameManager.play();
 
@@ -50,7 +50,7 @@ function createGameMenu() {
     menu.id = 'mainMenu';
     menu.style.backgroundColor = '#333';
     menu.style.display = 'block';
-    menu.style.width = 800;
+    menu.style.width = 1366;
     menu.style.height = 50;
     menu.style.border = '1px solid #333';
 

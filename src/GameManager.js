@@ -60,7 +60,7 @@ export default class GameManager{
             //alert('Вы стали частью чего-то большего');
             return;
         } else {
-            console.log(this.player.size);
+            //console.log(this.player.size);
             if(this.player.size >= this.targetPlayerSize) {
                 alert('You win!!!');
                 window.location.href = "/win";
