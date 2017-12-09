@@ -46,12 +46,12 @@ export default class Entity {
             this.size_y += sizeOffset;
             obj.kill(gameManager);
         } else {
-            if(this.size / 2 <= obj.size) {
+            if(this.size <= obj.size / 2) {
                 let sizeOffset = obj.size/ 10;
                 //console.log('kill this');
                 obj.size += sizeOffset;
                 obj.size_x += sizeOffset;
-                onj.size_y += sizeOffset;
+                obj.size_y += sizeOffset;
                 this.kill(gameManager);
             }
             //console.log('undefined touch');

@@ -4,6 +4,7 @@ import SpriteManager from "./SpriteManager";
 import PhysicManager from "./PhysicManager";
 import Player from "./Player"
 import Plant from "./Plant";
+import Enemy from "./Enemy"
 
 export default class GameManager{
     constructor(canvas, ctx) {
@@ -32,6 +33,8 @@ export default class GameManager{
 
     update() {
         if(this.player === null) {
+            console.log('player has been killed');
+            //alert('Вы стали частью чего-то большего');
             return;
         } else {
             this.player.move_x = 0;
@@ -58,6 +61,11 @@ export default class GameManager{
             }
 
             if(this.laterKill.length > 0) {
+                for(let i = 0; i < this.laterKill.length; i++) {
+                    if(this.laterKill[i].name === 'Player') {
+                        this.player = null;
+                    }
+                }
                 this.laterKill.length = 0;
             }
             this.draw();
@@ -82,6 +90,7 @@ export default class GameManager{
         this.entities.push(this.player);
 
         this.generatePlants(100);
+        this.generateEnemies(10);
 
         this.eventsManager.setup();
 
@@ -97,6 +106,17 @@ export default class GameManager{
             let rand_y = Math.floor(Math.random() * 3100 + 1);
 
             this.entities.push(this.factory['Plant'] = new Plant(this.spriteManager, rand_x, rand_y));
+        }
+    }
+
+    generateEnemies(count) {
+        for(let i = 0; i < count; i++) {
+            let rand_x = Math.floor(Math.random() * 3100 + 1);
+            let rand_y = Math.floor(Math.random() * 3100 + 1);
+
+            let enemyName = 'Enemy' + i;
+
+            this.entities.push(this.factory[enemyName] = new Enemy(this.spriteManager, rand_x, rand_y, enemyName));
         }
     }
 }

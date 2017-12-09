@@ -12,6 +12,6 @@ export default class Plant extends Entity{
     }
 
     draw(ctx) {
-        this.spriteManager.drawSprite(ctx, '2', this.pos_x, this.pos_y, this.size);
+        this.spriteManager.drawSprite(ctx, '1', this.pos_x, this.pos_y, this.size);
     }
 }
