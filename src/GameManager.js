@@ -87,8 +87,6 @@ export default class GameManager{
     }
 
     play() {
-        //setInterval(updateWorld, 100);
-        //setInterval(this.update(), 100).bind(this);
         setInterval(function () { this.update(); }.bind(this), 10);
     }
 

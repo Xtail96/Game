@@ -49,5 +49,6 @@ export default class Entity {
 
     kill() {
 
+
     }
 }
