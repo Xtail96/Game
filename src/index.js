@@ -55,7 +55,6 @@ function createGameMenu(canvasWidth) {
     menu.style.width = canvasWidth;
     menu.style.height = 25;
     menu.style.padding = 10;
-    //menu.style.border = '1px solid #eee';
 
     /*let buttons = createMenuButtons();
     for(let i in buttons){
@@ -109,10 +108,10 @@ function createDashboard() {
     playerSize.setAttribute('value', '0');
     playerSize.style.marginRight = 10;
     playerSize.style.backgroundColor = 'transparent';
-    playerSize.style.borderTop = '1px solid transparent';
-    playerSize.style.borderLeft = '1px solid transparent';
-    playerSize.style.borderRight = '1px solid transparent';
-    playerSize.style.borderBottom = '1px solid #333';
+    playerSize.style.borderTop = '1px solid #eee';
+    playerSize.style.borderLeft = '1px solid #eee';
+    playerSize.style.borderRight = '1px solid #eee';
+    playerSize.style.borderBottom = '1px solid #eee';
     playerSize.style.textAlign = 'center';
     playerSize.style.fontSize = '150%';
     playerSize.style.color = '#007769';
@@ -131,10 +130,10 @@ function createDashboard() {
     targetSize.setAttribute('value', '0');
     targetSize.style.marginRight = 10;
     targetSize.style.backgroundColor = 'transparent';
-    targetSize.style.borderTop = '1px solid transparent';
-    targetSize.style.borderLeft = '1px solid transparent';
-    targetSize.style.borderRight = '1px solid transparent';
-    targetSize.style.borderBottom = '1px solid #333';
+    targetSize.style.borderTop = '1px solid #eee';
+    targetSize.style.borderLeft = '1px solid #eee';
+    targetSize.style.borderRight = '1px solid #eee';
+    targetSize.style.borderBottom = '1px solid #eee';
     targetSize.style.textAlign = 'center';
     targetSize.style.fontSize = '150%';
     targetSize.style.width = 100;
@@ -153,10 +152,10 @@ function createDashboard() {
     plantsCount.setAttribute('value', '0');
     plantsCount.style.marginRight = 10;
     plantsCount.style.backgroundColor = 'transparent';
-    plantsCount.style.borderTop = '1px solid transparent';
-    plantsCount.style.borderLeft = '1px solid transparent';
-    plantsCount.style.borderRight = '1px solid transparent';
-    plantsCount.style.borderBottom = '1px solid #333';
+    plantsCount.style.borderTop = '1px solid #eee';
+    plantsCount.style.borderLeft = '1px solid #eee';
+    plantsCount.style.borderRight = '1px solid #eee';
+    plantsCount.style.borderBottom = '1px solid #eee';
     plantsCount.style.textAlign = 'center';
     plantsCount.style.fontSize = '150%';
     plantsCount.style.width = 100;
@@ -173,10 +172,10 @@ function createDashboard() {
     enemyCount.setAttribute('readonly', 'true');
     enemyCount.setAttribute('value', '0');
     enemyCount.style.backgroundColor = 'transparent';
-    enemyCount.style.borderTop = '1px solid transparent';
-    enemyCount.style.borderLeft = '1px solid transparent';
-    enemyCount.style.borderRight = '1px solid transparent';
-    enemyCount.style.borderBottom = '1px solid #333';
+    enemyCount.style.borderTop = '1px solid #eee';
+    enemyCount.style.borderLeft = '1px solid #eee';
+    enemyCount.style.borderRight = '1px solid #eee';
+    enemyCount.style.borderBottom = '1px solid #eee';
     enemyCount.style.textAlign = 'center';
     enemyCount.style.fontSize = '150%';
     enemyCount.style.width = 100;
