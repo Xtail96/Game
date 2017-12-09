@@ -58,7 +58,7 @@ export default class GameManager{
                 this.laterKill.length = 0;
             }
 
-            //this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             this.mapManager.centerAt(this.player.pos_x, this.player.pos_y);
             this.mapManager.draw(this.ctx);
             this.player.draw(this.ctx);
