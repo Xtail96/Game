@@ -25,8 +25,8 @@ function initGameField() {
 
     let canvas = document.getElementById('gameField');
     let context = canvas.getContext('2d');
-    canvas.width = 800;
-    canvas.height = 600;
+    canvas.width = 1366;
+    canvas.height = 700;
     canvas.style.border = '1px solid #333';
     //canvas.style.backgroundColor = '#eee';
     canvas.style.display = 'block';
@@ -39,7 +39,7 @@ function initGameField() {
     }
     mapManager.draw(context);*/
 
-    let gameManager = new GameManager(canvas, context);
+    let gameManager = new GameManager(canvas, context, canvas.width, canvas.height, 10, 100, 10);
     gameManager.loadAll();
     gameManager.play();
 

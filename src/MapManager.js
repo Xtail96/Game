@@ -1,6 +1,6 @@
 export default class MapManager{
 
-    constructor() {
+    constructor(width = 800, height = 600) {
         this.mapData = null;
         this.tLayerSand = null;
         this.xCount = 0;
@@ -11,7 +11,7 @@ export default class MapManager{
         this.imgLoadCount = 0;
         this.imgLoaded = false;
         this.jsonLoaded = false;
-        this.view = {x: 0, y: 0, w: 800, h: 600};
+        this.view = {x: 0, y: 0, w: width, h: height};
         //console.log('Map Manager created');
     }
 

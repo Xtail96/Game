@@ -36,28 +36,6 @@ export default class Entity {
         }
     }
 
-    onTouchEntity (obj, gameManager) {
-        //console.log('touch');
-        if(this.size / 2 >= obj.size) {
-            //console.log('kill obj');
-            let sizeOffset = obj.size / 10 ;
-            this.size += sizeOffset;
-            this.size_x += sizeOffset;
-            this.size_y += sizeOffset;
-            obj.kill(gameManager);
-        } else {
-            if(this.size <= obj.size / 2) {
-                let sizeOffset = obj.size/ 10;
-                //console.log('kill this');
-                obj.size += sizeOffset;
-                obj.size_x += sizeOffset;
-                obj.size_y += sizeOffset;
-                this.kill(gameManager);
-            }
-            //console.log('undefined touch');
-        }
-    }
-
     kill(gameManager) {
         console.log('kill ' + this.name);
         gameManager.laterKill.push(this);

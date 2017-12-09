@@ -1,7 +1,7 @@
 import Entity from "./Entity"
 
 export default class Enemy extends Entity{
-    constructor(spriteManager, x, y, name) {
+    constructor(spriteManager, x, y, name, growIncrement = 1/5, maxSize = 10) {
         super(spriteManager);
         this.healthpoints = 100;
         this.speed = 1;
@@ -10,6 +10,8 @@ export default class Enemy extends Entity{
         this.size = 1;
         this.name = name;
         this.target = null;
+        this.growIncrement = growIncrement;
+        this.maxSize = maxSize;
     }
 
     findTarget(gameManager) {
@@ -63,22 +65,14 @@ export default class Enemy extends Entity{
         //console.log('touch');
         if(this.size / 2 >= obj.size) {
             //console.log('kill obj');
-            let sizeOffset = obj.size / 10 ;
-            this.size += sizeOffset;
-            this.size_x += sizeOffset;
-            this.size_y += sizeOffset;
-            this.target = null;
-            obj.kill(gameManager);
-        } else {
-            if(this.size <= obj.size / 2) {
-                let sizeOffset = obj.size/ 10;
-                //console.log('kill this');
-                obj.size += sizeOffset;
-                obj.size_x += sizeOffset;
-                obj.size_y += sizeOffset;
-                this.kill(gameManager);
+            let sizeOffset = obj.size * this.growIncrement;
+            if(this.size + sizeOffset <= this.maxSize) {
+                this.size += sizeOffset;
+                this.size_x += sizeOffset;
+                this.size_y += sizeOffset;
+                this.target = null;
             }
-            //console.log('undefined touch');
+            obj.kill(gameManager);
         }
     }
 }

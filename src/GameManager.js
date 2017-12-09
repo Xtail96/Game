@@ -7,24 +7,39 @@ import Plant from "./Plant";
 import Enemy from "./Enemy"
 
 export default class GameManager{
-    constructor(canvas, ctx, plantsCount = 100, enemyCount = 10, enemyLimit = 10) {
+    constructor(canvas, ctx,
+                canvasWidth = 800,
+                canvasHeight = 600,
+                plantsCount = 100,
+                enemyCount = 10,
+                enemyLimit = 10,
+                playerGrowIncrement = 1/5,
+                enemyGrowIncrement = 1/3,
+                playerMaxSize = 5,
+                enemyMaxSize = 10) {
         this.canvas = canvas;
         this.ctx = ctx;
+        this.canvasWidth = canvasWidth;
+        this.canvasHeight = canvasHeight;
 
         this.plantCount = plantsCount;
         this.enemyCount = enemyCount;
         this.enemyLimit = enemyLimit;
+        this.playerGrowIncrement = playerGrowIncrement;
+        this.enemyGrowIncrement = enemyGrowIncrement;
+        this.playerMaxSize = playerMaxSize;
+        this.enemyMaxSize = enemyMaxSize;
 
         this.factory = {};
         this.entities = [];
         this.laterKill = [];
 
-        this.mapManager = new MapManager();
+        this.mapManager = new MapManager(this.canvasWidth, this.canvasHeight);
         this.eventsManager = new EventsManager(this.canvas);
         this.spriteManager = new SpriteManager(this.mapManager);
         this.physicManager = new PhysicManager();
 
-        this.player = new Player(this.spriteManager);
+        this.player = new Player(this.spriteManager, this.playerGrowIncrement, this.playerMaxSize);
     }
 
     initPlayer(obj) {
@@ -53,8 +68,8 @@ export default class GameManager{
 
             this.plantCount = this.getPlantCount();
             this.enemyCount = this.getEnemyCount();
-            if(this.plantCount <= this.enemyCount) {
-                this.generatePlants(this.enemyCount);
+            if(this.plantCount <= this.enemyCount / 2) {
+                this.generatePlants(this.enemyCount / 2);
             }
             if(this.enemyCount < this.enemyLimit) {
                 this.generateEnemies(1);
@@ -130,7 +145,8 @@ export default class GameManager{
 
             let enemyName = 'Enemy' + i;
 
-            this.entities.push(this.factory[enemyName] = new Enemy(this.spriteManager, rand_x, rand_y, enemyName));
+            this.entities.push(this.factory[enemyName] =
+                new Enemy(this.spriteManager, rand_x, rand_y, enemyName, this.enemyGrowIncrement, this.enemyMaxSize));
         }
     }
 
