@@ -88,7 +88,7 @@ export default class GameManager{
     }
 
     play() {
-        setInterval(function () { this.update(); }.bind(this), 25);
+        setInterval(function () { this.update(); }.bind(this), 10);
     }
 
     generatePlants(count) {

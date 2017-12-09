@@ -40,14 +40,14 @@ export default class Entity {
         //console.log('touch');
         if(this.size / 2 >= obj.size) {
             //console.log('kill obj');
-            let sizeOffset = obj.size/2;
+            let sizeOffset = obj.size / 10 ;
             this.size += sizeOffset;
             this.size_x += sizeOffset;
             this.size_y += sizeOffset;
             obj.kill(gameManager);
         } else {
             if(this.size / 2 <= obj.size) {
-                let sizeOffset = obj.size/2;
+                let sizeOffset = obj.size/ 10;
                 //console.log('kill this');
                 obj.size += sizeOffset;
                 obj.size_x += sizeOffset;

@@ -48,7 +48,8 @@ export default class SpriteManager {
             x -= this.mapManager.view.x;
             y -= this.mapManager.view.y;
 
-            ctx.drawImage(this.image, sprite.x, sprite.y, sprite.w, sprite.h, x - Math.abs(sprite.w - sprite.w * size), y - Math.abs(sprite.h - sprite.h * size), sprite.w * size, sprite.h * size);
+            //ctx.drawImage(this.image, sprite.x, sprite.y, sprite.w, sprite.h, x - Math.abs(sprite.w - sprite.w * size), y - Math.abs(sprite.h - sprite.h * size), sprite.w * size, sprite.h * size);
+            ctx.drawImage(this.image, sprite.x, sprite.y, sprite.w, sprite.h, x, y, sprite.w * size, sprite.h * size);
         }
     }
 
