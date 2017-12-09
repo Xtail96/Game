@@ -145,17 +145,16 @@ export default class GameManager{
 
     generatePlants(count) {
         for(let i = 0; i < count; i++) {
-            let rand_x = Math.floor(Math.random() * 3100 + 1);
-            let rand_y = Math.floor(Math.random() * 3100 + 1);
-
+            let rand_x = Math.floor(Math.random() * Math.max(this.mapManager.mapSize.x, 3200) + 1);
+            let rand_y = Math.floor(Math.random() * Math.max(this.mapManager.mapSize.y, 3200) + 1);
             this.entities.push(this.factory['Plant'] = new Plant(this.spriteManager, rand_x, rand_y));
         }
     }
 
     generateEnemies(count) {
         for(let i = 0; i < count; i++) {
-            let rand_x = Math.floor(Math.random() * 3100 + 1);
-            let rand_y = Math.floor(Math.random() * 3100 + 1);
+            let rand_x = Math.floor(Math.random() * Math.max(this.mapManager.mapSize.x, 3200) + 1);
+            let rand_y = Math.floor(Math.random() * Math.max(this.mapManager.mapSize.y, 3200) + 1);
 
             let enemyName = 'Enemy' + i;
 

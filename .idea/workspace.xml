@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b2d712e-0bbb-460d-9f0b-0e4acc76aaf1" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/map.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/map.tmx" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameManager.js" afterPath="$PROJECT_DIR$/src/GameManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LevelManager.js" afterPath="$PROJECT_DIR$/src/LevelManager.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +20,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="455">
               <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapManager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MapManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -56,41 +70,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SoundManager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SoundManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LevelManager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LevelManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="23" column="146" lean-forward="false" selection-start-line="23" selection-start-column="146" selection-end-line="23" selection-end-column="146" />
+            <state relative-caret-position="272">
+              <caret line="25" column="141" lean-forward="false" selection-start-line="25" selection-start-column="141" selection-end-line="25" selection-end-column="141" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Enemy.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Enemy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameManager.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameManager.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1312">
-              <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+            <state relative-caret-position="2176">
+              <caret line="148" column="93" lean-forward="false" selection-start-line="148" selection-start-column="93" selection-end-line="148" selection-end-column="93" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -137,6 +131,7 @@
       <find>onT</find>
       <find>consol</find>
       <find>cons</find>
+      <find>mapSize</find>
       <find>console</find>
     </findStrings>
   </component>
@@ -158,14 +153,14 @@
         <option value="$PROJECT_DIR$/src/PhysicManager.js" />
         <option value="$PROJECT_DIR$/src/SpriteManager.js" />
         <option value="$PROJECT_DIR$/src/Enemy.js" />
-        <option value="$PROJECT_DIR$/src/MapManager.js" />
         <option value="$PROJECT_DIR$/src/Entity.js" />
         <option value="$PROJECT_DIR$/src/Player.js" />
         <option value="$PROJECT_DIR$/src/Plant.js" />
         <option value="$PROJECT_DIR$/src/SoundManager.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/LevelManager.js" />
+        <option value="$PROJECT_DIR$/src/MapManager.js" />
         <option value="$PROJECT_DIR$/src/GameManager.js" />
+        <option value="$PROJECT_DIR$/src/LevelManager.js" />
       </list>
     </option>
   </component>
@@ -273,12 +268,12 @@
       <workItem from="1512683296649" duration="2148000" />
       <workItem from="1512717958256" duration="9284000" />
       <workItem from="1512745890978" duration="10740000" />
-      <workItem from="1512803228970" duration="28601000" />
+      <workItem from="1512803228970" duration="30338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80558000" />
+    <option name="totallyTimeSpent" value="82295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -543,14 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PhysicManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -607,29 +594,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MapManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LevelManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="23" column="146" lean-forward="false" selection-start-line="23" selection-start-column="146" selection-end-line="23" selection-end-column="146" />
+        <state relative-caret-position="272">
+          <caret line="25" column="141" lean-forward="false" selection-start-line="25" selection-start-column="141" selection-end-line="25" selection-end-column="141" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1312">
-          <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+        <state relative-caret-position="2176">
+          <caret line="148" column="93" lean-forward="false" selection-start-line="148" selection-start-column="93" selection-end-line="148" selection-end-column="93" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -18,10 +18,12 @@ export default class LevelManager {
 
         switch (levelNumber) {
             case 1:
-                this.gameManager = new GameManager(this.canvas, this.context, this.canvas.width, this.canvas.height, 10, 100, 5, 1/10, 1/25, 5, 7, 3);
+                this.gameManager =
+                    new GameManager(this.canvas, this.context, this.canvas.width, this.canvas.height, 10, 100, 5, 1/10, 1/25, 5, 7, 3, 'level_1_map.json');
                 break;
             case 2:
-                this.gameManager = new GameManager(this.canvas, this.context, this.canvas.width, this.canvas.height, 5, 10, 5, 1/25, 1/2, 6, 12, 5);
+                this.gameManager =
+                    new GameManager(this.canvas, this.context, this.canvas.width, this.canvas.height, 5, 10, 5, 1/25, 1/2, 6, 12, 5, 'level_2_map.json');
                 break;
         }
 
