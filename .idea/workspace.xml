@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b2d712e-0bbb-460d-9f0b-0e4acc76aaf1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Plant.js" afterPath="$PROJECT_DIR$/src/Plant.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SoundManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,11 +57,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plant.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Plant.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Plant.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
               <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SoundManager.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SoundManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="592">
+              <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -103,16 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="727">
               <caret line="51" column="79" lean-forward="false" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventsManager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EventsManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="66" lean-forward="false" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -164,6 +165,7 @@
         <option value="$PROJECT_DIR$/src/GameManager.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Plant.js" />
+        <option value="$PROJECT_DIR$/src/SoundManager.js" />
       </list>
     </option>
   </component>
@@ -271,12 +273,12 @@
       <workItem from="1512683296649" duration="2148000" />
       <workItem from="1512717958256" duration="9284000" />
       <workItem from="1512745890978" duration="10740000" />
-      <workItem from="1512803228970" duration="25602000" />
+      <workItem from="1512803228970" duration="27229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77559000" />
+    <option name="totallyTimeSpent" value="79186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -313,14 +315,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="75" lean-forward="false" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SpriteManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -627,6 +621,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SoundManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
           <folding />
         </state>
       </provider>
