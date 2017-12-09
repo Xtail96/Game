@@ -37,7 +37,7 @@ export default class Entity {
     }
 
     kill(gameManager) {
-        console.log('kill ' + this.name);
+        //console.log('kill ' + this.name);
         gameManager.laterKill.push(this);
     }
 }

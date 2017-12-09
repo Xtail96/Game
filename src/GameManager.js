@@ -15,12 +15,15 @@ export default class GameManager{
                 enemyLimit = 10,
                 playerGrowIncrement = 1/5,
                 enemyGrowIncrement = 1/3,
-                playerMaxSize = 5,
-                enemyMaxSize = 10) {
+                playerMaxSize = 3,
+                enemyMaxSize = 5,
+                targetPlayerSize = 2.5) {
         this.canvas = canvas;
         this.ctx = ctx;
         this.canvasWidth = canvasWidth;
         this.canvasHeight = canvasHeight;
+
+        this.targetPlayerSize = targetPlayerSize;
 
         this.plantCount = plantsCount;
         this.enemyCount = enemyCount;
@@ -53,9 +56,17 @@ export default class GameManager{
     update() {
         if(this.player === null) {
             console.log('player has been killed');
+            window.location.href = "/loose";
             //alert('Вы стали частью чего-то большего');
             return;
         } else {
+            console.log(this.player.size);
+            if(this.player.size >= this.targetPlayerSize) {
+                alert('You win!!!');
+                window.location.href = "/win";
+                return;
+            }
+
             this.player.move_x = 0;
             this.player.move_y = 0;
 
@@ -74,7 +85,7 @@ export default class GameManager{
             if(this.enemyCount < this.enemyLimit) {
                 this.generateEnemies(1);
             }
-            console.log(this.plantCount + ' ' + this.enemyCount);
+            //console.log(this.plantCount + ' ' + this.enemyCount);
 
             this.entities.forEach(function (e) {
                 try {
