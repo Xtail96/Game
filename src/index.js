@@ -183,4 +183,73 @@ function createDashboard() {
     return elements;
 }
 
-initGameField();
+
+if(window.location.search==='') {
+    initPreview();
+} else {
+    initGameField();
+}
+
+function initPreview() {
+    let startMenu = document.createElement('div');
+    startMenu.id = 'startMenu';
+    startMenu.style.width = '350px';
+    startMenu.style.height = 'auto';
+    startMenu.style.marginTop = '50px';
+    startMenu.style.marginLeft = 'auto';
+    startMenu.style.marginRight = 'auto';
+    startMenu.style.padding = '25px';
+    startMenu.style.backgroundColor = '#eee';
+    startMenu.style.border = '1px solid #dfdfdf';
+    startMenu.style.borderRadius = '5px';
+
+
+    let nicknameLabel = document.createElement('b');
+    nicknameLabel.id = 'nicknameLabel';
+    nicknameLabel.textContent = 'Ваше имя:';
+    startMenu.appendChild(nicknameLabel);
+
+    let nicknameInput = document.createElement('input');
+    nicknameInput.id = 'nicknameInput';
+    nicknameInput.setAttribute('type', 'text');
+    nicknameInput.setAttribute('placeholder', 'Введите имя пользователя');
+    nicknameInput.style.padding = '10px';
+    nicknameInput.style.marginBottom = '10px';
+    nicknameInput.style.backgroundColor = '#fff';
+    //nicknameInput.style.borderTop = '1px solid #007769';
+    //nicknameInput.style.borderLeft = '1px solid #007769';
+    //nicknameInput.style.borderRight = '1px solid #007769';
+    //nicknameInput.style.borderBottom = '1px solid #007769';
+    nicknameInput.style.border = '1px solid #1B80FA';
+    nicknameInput.style.borderRadius = '5px';
+    nicknameInput.style.textAlign = 'center';
+    nicknameInput.style.fontSize = '150%';
+    nicknameInput.style.width = '100%';
+    nicknameInput.style.color = '#333';
+    startMenu.appendChild(nicknameInput);
+
+
+    let startButton = document.createElement('input');
+    startButton.id = 'startButton';
+    startButton.type = 'button';
+    startButton.value = 'Start';
+    startButton.onclick = function () {
+        startLevel();
+    };
+    startButton.style.width = '100%';
+    startButton.style.padding = '5px';
+    startButton.style.fontSize = '200%';
+    startButton.style.color = '#fff';
+    startButton.style.backgroundColor = '#46AF46';
+    startButton.style.border = '1px solid transparent';
+    startButton.style.borderRadius = '5px';
+    startButton.style.cursor = 'pointer';
+    startMenu.appendChild(startButton);
+
+
+    document.body.appendChild(startMenu);
+}
+
+function startLevel() {
+    window.location.search = '?level=1&playerSprite=1';
+}
