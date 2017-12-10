@@ -216,10 +216,6 @@ function initPreview() {
     nicknameInput.style.padding = '10px';
     nicknameInput.style.marginBottom = '10px';
     nicknameInput.style.backgroundColor = '#fff';
-    //nicknameInput.style.borderTop = '1px solid #007769';
-    //nicknameInput.style.borderLeft = '1px solid #007769';
-    //nicknameInput.style.borderRight = '1px solid #007769';
-    //nicknameInput.style.borderBottom = '1px solid #007769';
     nicknameInput.style.border = '1px solid #1B80FA';
     nicknameInput.style.borderRadius = '5px';
     nicknameInput.style.textAlign = 'center';
@@ -228,6 +224,71 @@ function initPreview() {
     nicknameInput.style.color = '#333';
     startMenu.appendChild(nicknameInput);
 
+
+    let levelLabel = document.createElement('b');
+    levelLabel.id = 'levelLabel';
+    levelLabel.textContent = 'Уровень:';
+    startMenu.appendChild(levelLabel);
+
+    let levelInput = document.createElement('input');
+    levelInput.id = 'levelInput';
+    levelInput.setAttribute('type', 'number');
+    levelInput.setAttribute('placeholder', 'Введите номер уровня 1-2');
+    levelInput.style.padding = '10px';
+    levelInput.style.marginBottom = '10px';
+    levelInput.style.backgroundColor = '#fff';
+    levelInput.style.border = '1px solid #1B80FA';
+    levelInput.style.borderRadius = '5px';
+    levelInput.style.textAlign = 'center';
+    levelInput.style.fontSize = '150%';
+    levelInput.style.width = '100%';
+    levelInput.style.color = '#333';
+    startMenu.appendChild(levelInput);
+
+
+    let playerSpriteLabel = document.createElement('b');
+    playerSpriteLabel.id = 'playerSpriteLabel';
+    playerSpriteLabel.textContent = 'Персонаж:';
+    startMenu.appendChild(playerSpriteLabel);
+
+    let playerSpriteInput = document.createElement('input');
+    playerSpriteInput.id = 'playerSpriteInput';
+    playerSpriteInput.setAttribute('type', 'number');
+    playerSpriteInput.setAttribute('placeholder', 'Выберите персонажа 1-4');
+    playerSpriteInput.style.padding = '10px';
+    playerSpriteInput.style.marginBottom = '10px';
+    playerSpriteInput.style.backgroundColor = '#fff';
+    playerSpriteInput.style.border = '1px solid #1B80FA';
+    playerSpriteInput.style.borderRadius = '5px';
+    playerSpriteInput.style.textAlign = 'center';
+    playerSpriteInput.style.fontSize = '150%';
+    playerSpriteInput.style.width = '100%';
+    playerSpriteInput.style.color = '#333';
+    startMenu.appendChild(playerSpriteInput);
+
+    //startMenu.appendChild(document.createElement('br'));
+
+    /*let levelInput = document.createElement('select');
+    levelInput.id = 'levelInput';
+    levelInput.style.width = '100%';
+    levelInput.style.marginBottom = '10px';
+
+
+    let undefinedLevel = document.createElement('option');
+    undefinedLevel.id = 'undefinedLevel';
+    levelInput.appendChild(undefinedLevel);
+
+    let firstLevel = document.createElement('option');
+    firstLevel.id = 'firstLevel';
+    firstLevel.textContent = 'Первый';
+    levelInput.appendChild(firstLevel);
+
+    let secondLevel = document.createElement('option');
+    secondLevel.id = 'secondLevel';
+    secondLevel.textContent = 'Второй';
+    levelInput.appendChild(secondLevel);
+
+    startMenu.appendChild(levelInput);*/
 
     let startButton = document.createElement('input');
     startButton.id = 'startButton';
