@@ -312,5 +312,9 @@ function initPreview() {
 }
 
 function startLevel() {
-    window.location.search = '?level=1&playerSprite=1';
+    let playerNickname = document.getElementById('nicknameInput').value.toString();
+    let playerSprite = document.getElementById('playerSpriteInput').value.toString();
+    let level = document.getElementById('levelInput').value.toString();
+
+    window.location.search = '?playerNickname=' + playerNickname + '&playerSprite=' + playerSprite + '&level=' + level ;
 }
