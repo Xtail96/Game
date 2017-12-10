@@ -97,7 +97,7 @@ function createDashboard() {
 
     let playerSizeLabel = document.createElement('b');
     playerSizeLabel.id = 'playerSizeLabel';
-    playerSizeLabel.textContent = 'Размер игрока: ';
+    playerSizeLabel.textContent = 'Your size: ';
     elements.push(playerSizeLabel);
 
     let playerSize = document.createElement('input');
@@ -119,7 +119,7 @@ function createDashboard() {
 
     let targetSizeLabel = document.createElement('b');
     targetSizeLabel.id = 'targetSizeLabel';
-    targetSizeLabel.textContent = 'Цель: ';
+    targetSizeLabel.textContent = 'Target: ';
     elements.push(targetSizeLabel);
 
     let targetSize = document.createElement('input');
@@ -141,7 +141,7 @@ function createDashboard() {
 
     let plantCountLabel = document.createElement('b');
     plantCountLabel.id = 'plantCountLabel';
-    plantCountLabel.textContent = 'Количество растений: ';
+    plantCountLabel.textContent = 'Plants: ';
     elements.push(plantCountLabel);
 
     let plantsCount = document.createElement('input');
@@ -162,7 +162,7 @@ function createDashboard() {
 
     let enemyCountLabel = document.createElement('b');
     enemyCountLabel.id = 'enemyCountLabel';
-    enemyCountLabel.textContent = 'Количество соперников: ';
+    enemyCountLabel.textContent = 'Enemies: ';
     elements.push(enemyCountLabel);
 
     let enemyCount = document.createElement('input');
@@ -199,13 +199,13 @@ function initPreview() {
 
     let nicknameLabel = document.createElement('b');
     nicknameLabel.id = 'nicknameLabel';
-    nicknameLabel.textContent = 'Ваше имя:';
+    nicknameLabel.textContent = 'Username:';
     startMenu.appendChild(nicknameLabel);
 
     let nicknameInput = document.createElement('input');
     nicknameInput.id = 'nicknameInput';
     nicknameInput.setAttribute('type', 'text');
-    nicknameInput.setAttribute('placeholder', 'Введите имя пользователя');
+    nicknameInput.setAttribute('placeholder', 'Type username');
     nicknameInput.style.padding = '10px';
     nicknameInput.style.marginBottom = '10px';
     nicknameInput.style.backgroundColor = '#fff';
@@ -220,13 +220,13 @@ function initPreview() {
 
     let levelLabel = document.createElement('b');
     levelLabel.id = 'levelLabel';
-    levelLabel.textContent = 'Уровень:';
+    levelLabel.textContent = 'Level:';
     startMenu.appendChild(levelLabel);
 
     let levelInput = document.createElement('input');
     levelInput.id = 'levelInput';
     levelInput.setAttribute('type', 'number');
-    levelInput.setAttribute('placeholder', 'Введите номер уровня 1-2');
+    levelInput.setAttribute('placeholder', 'Choose level 1-2');
     levelInput.style.padding = '10px';
     levelInput.style.marginBottom = '10px';
     levelInput.style.backgroundColor = '#fff';
@@ -241,13 +241,13 @@ function initPreview() {
 
     let playerSpriteLabel = document.createElement('b');
     playerSpriteLabel.id = 'playerSpriteLabel';
-    playerSpriteLabel.textContent = 'Персонаж:';
+    playerSpriteLabel.textContent = 'Character:';
     startMenu.appendChild(playerSpriteLabel);
 
     let playerSpriteInput = document.createElement('input');
     playerSpriteInput.id = 'playerSpriteInput';
     playerSpriteInput.setAttribute('type', 'number');
-    playerSpriteInput.setAttribute('placeholder', 'Выберите персонажа 1-4');
+    playerSpriteInput.setAttribute('placeholder', 'Choose your character 1-4');
     playerSpriteInput.style.padding = '10px';
     playerSpriteInput.style.marginBottom = '10px';
     playerSpriteInput.style.backgroundColor = '#fff';
