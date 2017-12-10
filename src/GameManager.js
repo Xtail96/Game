@@ -60,60 +60,62 @@ export default class GameManager{
     update() {
         if(this.player === null) {
             console.log('player has been killed');
-            window.location.href = "/loose";
+            alert(this.player.nickname + '! Вы стали частью чего-то большего.');
+            window.location.search = "result=loose";
+            window.reloadApp();
             //alert('Вы стали частью чего-то большего');
             return;
         } else {
             //console.log(this.player.size);
             if(this.player.size >= this.targetPlayerSize) {
                 alert(this.player.nickname + '! You win!!!');
-                window.location.href = "/win";
+                window.location.search = "result=win";
                 return;
-            }
+            } else {
+                this.player.move_x = 0;
+                this.player.move_y = 0;
 
-            this.player.move_x = 0;
-            this.player.move_y = 0;
-
-            if(this.eventsManager.cursorPositionChanged) {
-                this.player.move_x = this.mapManager.view.x + this.eventsManager.mouse_x;
-                this.player.move_y = this.mapManager.view.y + this.eventsManager.mouse_y;
-                this.player.step(this.player.move_x, this.player.move_y);
-                //console.log(this.player.pos_x + ' ' + this.player.pos_y);
-            }
-
-            this.plantCount = this.getPlantCount();
-            this.enemyCount = this.getEnemyCount();
-            if(this.plantCount <= this.enemyCount / 2) {
-                this.generatePlants(this.enemyCount / 2);
-            }
-            if(this.enemyCount < this.enemyLimit) {
-                this.generateEnemies(1);
-            }
-            //console.log(this.plantCount + ' ' + this.enemyCount);
-
-            this.entities.forEach(function (e) {
-                try {
-                    e.update(this);
-                } catch (ex) {}
-            }.bind(this));
-
-            for(let i = 0; i < this.laterKill.length; i++) {
-                let idx = this.entities.indexOf(this.laterKill[i]);
-                if(idx > -1) {
-                    this.entities.splice(idx, 1);
+                if(this.eventsManager.cursorPositionChanged) {
+                    this.player.move_x = this.mapManager.view.x + this.eventsManager.mouse_x;
+                    this.player.move_y = this.mapManager.view.y + this.eventsManager.mouse_y;
+                    this.player.step(this.player.move_x, this.player.move_y);
+                    //console.log(this.player.pos_x + ' ' + this.player.pos_y);
                 }
-            }
 
-            if(this.laterKill.length > 0) {
+                this.plantCount = this.getPlantCount();
+                this.enemyCount = this.getEnemyCount();
+                if(this.plantCount <= this.enemyCount / 2) {
+                    this.generatePlants(this.enemyCount / 2);
+                }
+                if(this.enemyCount < this.enemyLimit) {
+                    this.generateEnemies(1);
+                }
+                //console.log(this.plantCount + ' ' + this.enemyCount);
+
+                this.entities.forEach(function (e) {
+                    try {
+                        e.update(this);
+                    } catch (ex) {}
+                }.bind(this));
+
                 for(let i = 0; i < this.laterKill.length; i++) {
-                    if(this.laterKill[i].name === 'Player') {
-                        this.player = null;
+                    let idx = this.entities.indexOf(this.laterKill[i]);
+                    if(idx > -1) {
+                        this.entities.splice(idx, 1);
                     }
                 }
-                this.laterKill.length = 0;
+
+                if(this.laterKill.length > 0) {
+                    for(let i = 0; i < this.laterKill.length; i++) {
+                        if(this.laterKill[i].name === 'Player') {
+                            this.player = null;
+                        }
+                    }
+                    this.laterKill.length = 0;
+                }
+                this.updateDashboard();
+                this.draw();
             }
-            this.updateDashboard();
-            this.draw();
         }
     }
 
@@ -165,7 +167,7 @@ export default class GameManager{
         }
 
         function generateEnemiesSpriteNumber() {
-            return (Math.floor(Math.random() * 3 + 1)).toString();
+            return (Math.floor(Math.random() * 4 + 1)).toString();
         }
     }
 
