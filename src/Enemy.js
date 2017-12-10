@@ -14,6 +14,7 @@ export default class Enemy extends Entity{
         this.maxSize = maxSize;
         //this.spriteNumber = this.generateSpriteNumber();
         this.spriteNumber = spriteNumber;
+        this.targetTime = 0;
     }
 
     /*draw(ctx) {
@@ -29,6 +30,13 @@ export default class Enemy extends Entity{
                 this.target = gameManager.entities[rand_target];
             } else {
                 this.findTarget(gameManager);
+            }
+        } else {
+            this.targetTime++;
+            //console.log(this.targetTime);
+            if(this.targetTime >= 2500) {
+                this.target = null;
+                this.targetTime = 0;
             }
         }
     }
