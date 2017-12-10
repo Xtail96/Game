@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -68,10 +68,146 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__SpriteManager__ = __webpack_require__(1);
+
+
+class Entity {
+    constructor(spriteManager) {
+        this.spriteManager = spriteManager;
+        this.pos_x = 0;
+        this.pos_y = 0;
+        this.size_x = 64;
+        this.size_y = 64;
+        this.size = 1;
+        this.speed = 0;
+        this.name = 'undefined';
+        this.spriteNumber = 'undefined';
+    }
+
+    step(target_x, target_y) {
+        //console.log(target_x + ' ' + target_y);
+        //console.log(this.pos_x + ' ' + this.pos_y);
+        if (target_x < 0 || target_y < 0) {
+            return;
+        }
+
+        if (target_x > this.pos_x) {
+            this.pos_x += 1 + this.speed;
+        } else {
+            if (target_x < this.pos_x) {
+                this.pos_x -= 1 + this.speed;
+            }
+        }
+
+        if (target_y > this.pos_y) {
+            this.pos_y += 1 + this.speed;
+        } else {
+            if (target_y < this.pos_y) {
+                this.pos_y -= 1 + this.speed;
+            }
+        }
+    }
+
+    draw(ctx) {
+        /*if(this.name !== 'Player' && this.name !== 'Plant') {
+            console.log(this.spriteNumber);
+        }*/
+        this.spriteManager.drawSprite(ctx, this.spriteNumber, this.pos_x, this.pos_y, this.size);
+    }
+
+    kill(gameManager) {
+        //console.log('kill ' + this.name);
+        gameManager.laterKill.push(this);
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Entity;
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class SpriteManager {
+    constructor(mapManager) {
+        this.mapManager = mapManager;
+        this.image = new Image();
+        this.sprites = new Array();
+        this.imgLoaded = false;
+        this.jsonLoaded = false;
+    }
+
+    loadAtlas(atlasJson, atlasImg) {
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if(request.readyState === 4 && request.status === 200) {
+                this.parseAtlas(request.responseText);
+            }
+        }.bind(this);
+
+        request.open('GET', atlasJson, true);
+        request.send();
+        this.loadImg(atlasImg);
+    }
+
+    loadImg(imgName) {
+        this.image.onload = function () {
+            this.imgLoaded = true;
+        }.bind(this);
+        this.image.src = imgName;
+    }
+
+    parseAtlas(atlasJSON) {
+        let atlas = JSON.parse(atlasJSON);
+        for(let name in atlas.frames) {
+            let frame = atlas.frames[name].frame;
+            this.sprites.push({name: name, x: frame.x, y: frame.y, w: frame.w, h: frame.h});
+        }
+        this.jsonLoaded = true;
+    }
+
+    drawSprite(ctx, name, x, y, size = 1) {
+        if(!this.imgLoaded || !this.jsonLoaded) {
+            setTimeout(function () { this.drawSprite(ctx, name , x, y, size); }.bind(this), 100);
+        } else {
+            let sprite = this.getSprite(name);
+            //console.log(name);
+            if(!this.mapManager.isVisible(x, y, sprite.w, sprite.h)) {
+                return;
+            }
+
+            x -= this.mapManager.view.x;
+            y -= this.mapManager.view.y;
+
+            //ctx.drawImage(this.image, sprite.x, sprite.y, sprite.w, sprite.h, x - Math.abs(sprite.w - sprite.w * size), y - Math.abs(sprite.h - sprite.h * size), sprite.w * size, sprite.h * size);
+            ctx.drawImage(this.image, sprite.x, sprite.y, sprite.w, sprite.h, x, y, sprite.w * size, sprite.h * size);
+        }
+    }
+
+    getSprite(name) {
+        for(let i = 0; i < this.sprites.length; i++) {
+            let s = this.sprites[i];
+            if(s.name === name) {
+                return s;
+            }
+        }
+        return null;
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = SpriteManager;
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MapManager_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__LevelManager__ = __webpack_require__(6);
+
+//import MapManager from './MapManager.js'
 
 
 
@@ -96,37 +232,52 @@ function initGameField() {
     document.body.appendChild(createGameField());
 
     let canvas = document.getElementById('gameField');
-    let context =canvas.getContext('2d');
-    canvas.width = 800;
-    canvas.height = 600;
-    canvas.style.border = '1px solid #333';
-    canvas.style.backgroundColor = '#eee';
+    let context = canvas.getContext('2d');
+    canvas.width = 1366;
+    canvas.height = 700;
+    //canvas.style.border = '1px solid transparent';
+    //canvas.style.backgroundColor = '#eee';
     canvas.style.display = 'block';
 
-    let mapManager = new __WEBPACK_IMPORTED_MODULE_1__MapManager_js__["a" /* default */]();
-    mapManager.loadMap('/resources/map.json');
-    //mapManager.draw(context);
+    /*let mapManager = new MapManager();
+    if(mapManager.loadMap('map.json')) {
+        mapManager.draw(context);
+    } else {
+        console.log('can not load map');
+    }
+    mapManager.draw(context);*/
+
+    initGameMenu(canvas.width);
+
+    let levelManager = new __WEBPACK_IMPORTED_MODULE_1__LevelManager__["a" /* default */](canvas, context);
+    levelManager.startLevel();
+
 }
 
-function createGameMenu() {
+function createGameMenu(canvasWidth) {
     let menu = document.createElement('div');
     menu.id = 'mainMenu';
-    menu.style.backgroundColor = '#333';
+    menu.style.backgroundColor = '#fff';
     menu.style.display = 'block';
-    menu.style.width = 800;
-    menu.style.height = 50;
-    menu.style.border = '1px solid #333';
+    menu.style.width = canvasWidth;
+    menu.style.height = 25;
+    menu.style.padding = 10;
 
-    let buttons = createMenuButtons();
+    /*let buttons = createMenuButtons();
     for(let i in buttons){
         menu.appendChild(buttons[i]);
+    }*/
+
+    let dashboardElements = createDashboard();
+    for(let i in dashboardElements) {
+        menu.appendChild(dashboardElements[i]);
     }
 
     return menu;
 }
 
-function initGameMenu() {
-    document.body.appendChild(createGameMenu());
+function initGameMenu(canvasWidth) {
+    document.body.appendChild(createGameMenu(canvasWidth));
 }
 
 function createMenuButtons() {
@@ -149,12 +300,247 @@ function createMenuButtons() {
     return buttons;
 }
 
-initGameMenu();
-initGameField();
+function createDashboard() {
+    let elements = [];
 
+    let playerSizeLabel = document.createElement('b');
+    playerSizeLabel.id = 'playerSizeLabel';
+    playerSizeLabel.textContent = 'Your size: ';
+    elements.push(playerSizeLabel);
+
+    let playerSize = document.createElement('input');
+    playerSize.id = 'playerSize';
+    playerSize.setAttribute('type', 'text');
+    playerSize.setAttribute('readonly', '');
+    playerSize.setAttribute('value', '0');
+    playerSize.style.marginRight = 10;
+    playerSize.style.backgroundColor = 'transparent';
+    playerSize.style.borderTop = '1px solid #eee';
+    playerSize.style.borderLeft = '1px solid #eee';
+    playerSize.style.borderRight = '1px solid #eee';
+    playerSize.style.borderBottom = '1px solid #eee';
+    playerSize.style.textAlign = 'center';
+    playerSize.style.fontSize = '150%';
+    playerSize.style.color = '#007769';
+    elements.push(playerSize);
+
+
+    let targetSizeLabel = document.createElement('b');
+    targetSizeLabel.id = 'targetSizeLabel';
+    targetSizeLabel.textContent = 'Target: ';
+    elements.push(targetSizeLabel);
+
+    let targetSize = document.createElement('input');
+    targetSize.id = 'targetPlayerSize';
+    targetSize.setAttribute('type', 'text');
+    targetSize.setAttribute('readonly', '');
+    targetSize.setAttribute('value', '0');
+    targetSize.style.marginRight = 10;
+    targetSize.style.backgroundColor = 'transparent';
+    targetSize.style.borderTop = '1px solid #eee';
+    targetSize.style.borderLeft = '1px solid #eee';
+    targetSize.style.borderRight = '1px solid #eee';
+    targetSize.style.borderBottom = '1px solid #eee';
+    targetSize.style.textAlign = 'center';
+    targetSize.style.fontSize = '150%';
+    targetSize.style.width = 100;
+    targetSize.style.color = '#a52a2a';
+    elements.push(targetSize);
+
+    let plantCountLabel = document.createElement('b');
+    plantCountLabel.id = 'plantCountLabel';
+    plantCountLabel.textContent = 'Plants: ';
+    elements.push(plantCountLabel);
+
+    let plantsCount = document.createElement('input');
+    plantsCount.id = 'plantCount';
+    plantsCount.setAttribute('type', 'text');
+    plantsCount.setAttribute('readonly', 'true');
+    plantsCount.setAttribute('value', '0');
+    plantsCount.style.marginRight = 10;
+    plantsCount.style.backgroundColor = 'transparent';
+    plantsCount.style.borderTop = '1px solid #eee';
+    plantsCount.style.borderLeft = '1px solid #eee';
+    plantsCount.style.borderRight = '1px solid #eee';
+    plantsCount.style.borderBottom = '1px solid #eee';
+    plantsCount.style.textAlign = 'center';
+    plantsCount.style.fontSize = '150%';
+    plantsCount.style.width = 100;
+    elements.push(plantsCount);
+
+    let enemyCountLabel = document.createElement('b');
+    enemyCountLabel.id = 'enemyCountLabel';
+    enemyCountLabel.textContent = 'Enemies: ';
+    elements.push(enemyCountLabel);
+
+    let enemyCount = document.createElement('input');
+    enemyCount.id = 'enemyCount';
+    enemyCount.setAttribute('type', 'text');
+    enemyCount.setAttribute('readonly', 'true');
+    enemyCount.setAttribute('value', '0');
+    enemyCount.style.backgroundColor = 'transparent';
+    enemyCount.style.borderTop = '1px solid #eee';
+    enemyCount.style.borderLeft = '1px solid #eee';
+    enemyCount.style.borderRight = '1px solid #eee';
+    enemyCount.style.borderBottom = '1px solid #eee';
+    enemyCount.style.textAlign = 'center';
+    enemyCount.style.fontSize = '150%';
+    enemyCount.style.width = 100;
+    elements.push(enemyCount);
+
+    return elements;
+}
+
+function initPreview() {
+    let startMenu = document.createElement('div');
+    startMenu.id = 'startMenu';
+    startMenu.style.width = '350px';
+    startMenu.style.height = 'auto';
+    startMenu.style.marginTop = '50px';
+    startMenu.style.marginLeft = 'auto';
+    startMenu.style.marginRight = 'auto';
+    startMenu.style.padding = '25px';
+    startMenu.style.backgroundColor = '#eee';
+    startMenu.style.border = '1px solid #dfdfdf';
+    startMenu.style.borderRadius = '5px';
+
+
+    let nicknameLabel = document.createElement('b');
+    nicknameLabel.id = 'nicknameLabel';
+    nicknameLabel.textContent = 'Username:';
+    startMenu.appendChild(nicknameLabel);
+
+    let nicknameInput = document.createElement('input');
+    nicknameInput.id = 'nicknameInput';
+    nicknameInput.setAttribute('type', 'text');
+    nicknameInput.setAttribute('placeholder', 'Type username');
+    nicknameInput.style.padding = '10px';
+    nicknameInput.style.marginBottom = '10px';
+    nicknameInput.style.backgroundColor = '#fff';
+    nicknameInput.style.border = '1px solid #1B80FA';
+    nicknameInput.style.borderRadius = '5px';
+    nicknameInput.style.textAlign = 'center';
+    nicknameInput.style.fontSize = '150%';
+    nicknameInput.style.width = '100%';
+    nicknameInput.style.color = '#333';
+    startMenu.appendChild(nicknameInput);
+
+
+    let levelLabel = document.createElement('b');
+    levelLabel.id = 'levelLabel';
+    levelLabel.textContent = 'Level:';
+    startMenu.appendChild(levelLabel);
+
+    let levelInput = document.createElement('input');
+    levelInput.id = 'levelInput';
+    levelInput.setAttribute('type', 'number');
+    levelInput.setAttribute('placeholder', 'Choose level 1-2');
+    levelInput.style.padding = '10px';
+    levelInput.style.marginBottom = '10px';
+    levelInput.style.backgroundColor = '#fff';
+    levelInput.style.border = '1px solid #1B80FA';
+    levelInput.style.borderRadius = '5px';
+    levelInput.style.textAlign = 'center';
+    levelInput.style.fontSize = '150%';
+    levelInput.style.width = '100%';
+    levelInput.style.color = '#333';
+    startMenu.appendChild(levelInput);
+
+
+    let playerSpriteLabel = document.createElement('b');
+    playerSpriteLabel.id = 'playerSpriteLabel';
+    playerSpriteLabel.textContent = 'Character:';
+    startMenu.appendChild(playerSpriteLabel);
+
+    let playerSpriteInput = document.createElement('input');
+    playerSpriteInput.id = 'playerSpriteInput';
+    playerSpriteInput.setAttribute('type', 'number');
+    playerSpriteInput.setAttribute('placeholder', 'Choose your character 1-4');
+    playerSpriteInput.style.padding = '10px';
+    playerSpriteInput.style.marginBottom = '10px';
+    playerSpriteInput.style.backgroundColor = '#fff';
+    playerSpriteInput.style.border = '1px solid #1B80FA';
+    playerSpriteInput.style.borderRadius = '5px';
+    playerSpriteInput.style.textAlign = 'center';
+    playerSpriteInput.style.fontSize = '150%';
+    playerSpriteInput.style.width = '100%';
+    playerSpriteInput.style.color = '#333';
+    startMenu.appendChild(playerSpriteInput);
+
+    //startMenu.appendChild(document.createElement('br'));
+
+    /*let levelInput = document.createElement('select');
+    levelInput.id = 'levelInput';
+    levelInput.style.width = '100%';
+    levelInput.style.marginBottom = '10px';
+
+
+    let undefinedLevel = document.createElement('option');
+    undefinedLevel.id = 'undefinedLevel';
+    levelInput.appendChild(undefinedLevel);
+
+    let firstLevel = document.createElement('option');
+    firstLevel.id = 'firstLevel';
+    firstLevel.textContent = 'Первый';
+    levelInput.appendChild(firstLevel);
+
+    let secondLevel = document.createElement('option');
+    secondLevel.id = 'secondLevel';
+    secondLevel.textContent = 'Второй';
+    levelInput.appendChild(secondLevel);
+
+    startMenu.appendChild(levelInput);*/
+
+    let startButton = document.createElement('input');
+    startButton.id = 'startButton';
+    startButton.type = 'button';
+    startButton.value = 'Start';
+    startButton.onclick = function () {
+        startLevel();
+    };
+    startButton.style.width = '100%';
+    startButton.style.padding = '5px';
+    startButton.style.fontSize = '200%';
+    startButton.style.color = '#fff';
+    startButton.style.backgroundColor = '#46AF46';
+    startButton.style.border = '1px solid transparent';
+    startButton.style.borderRadius = '5px';
+    startButton.style.cursor = 'pointer';
+    startMenu.appendChild(startButton);
+
+
+    document.body.appendChild(startMenu);
+}
+
+function startLevel() {
+    let playerNickname = document.getElementById('nicknameInput').value.toString();
+    let playerSprite = document.getElementById('playerSpriteInput').value.toString();
+    let level = document.getElementById('levelInput').value.toString();
+
+    window.location.search = '?playerNickname=' + playerNickname + '&playerSprite=' + playerSprite + '&level=' + level ;
+}
+
+console.log(window.location.search);
+if(window.location.search === '') {
+    initPreview();
+} else {
+    if(window.location.search === '?result=win') {
+        initWinPage();
+    } else {
+        initGameField();
+    }
+}
+
+function initWinPage() {
+    alert('win!');
+}
+
+function initLoosePage() {
+   alert('loose(');
+}
 
 /***/ }),
-/* 1 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -17243,10 +17629,10 @@ initGameField();
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(3)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(5)(module)))
 
 /***/ }),
-/* 2 */
+/* 4 */
 /***/ (function(module, exports) {
 
 var g;
@@ -17273,7 +17659,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -17301,13 +17687,334 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 4 */
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__GameManager__ = __webpack_require__(7);
+
+
+class LevelManager {
+    constructor(canvas, context) {
+        this.canvas = canvas;
+        this.context = context;
+        this.gameManager = null;
+    }
+
+    getLevelNumber() {
+
+    }
+
+    startLevel() {
+        let levelNumber = this.getParam('level');
+        let playerSprite = this.getParam('playerSprite').toString();
+        //console.log(playerSprite);
+        if(playerSprite === '') {
+            playerSprite = '1';
+        }
+
+        let playerName = this.getParam('playerNickname').toString();
+        if(playerName === '') {
+            playerName = 'Player';
+        }
+
+        //console.log(levelNumber);
+
+        switch (levelNumber) {
+            case 1:
+                this.gameManager =
+                    new __WEBPACK_IMPORTED_MODULE_0__GameManager__["a" /* default */](this.canvas, this.context, this.canvas.width, this.canvas.height, 10, 100, 5, 1/10, 1/25, 5, 7, 3, 'level_1_map.json', playerSprite, playerName);
+                break;
+            case 2:
+                this.gameManager =
+                    new __WEBPACK_IMPORTED_MODULE_0__GameManager__["a" /* default */](this.canvas, this.context, this.canvas.width, this.canvas.height, 5, 10, 5, 1/25, 1/2, 6, 12, 5, 'level_2_map.json', playerSprite);
+                break;
+        }
+
+        if(this.gameManager !== null) {
+            this.gameManager.loadAll();
+            this.gameManager.play();
+        }
+    }
+
+
+    getParam(param) {
+        let queries = window.location.search, regex, resRegex, results, response;
+        param = encodeURIComponent(param);
+        regex = new RegExp('[\\?&]' + param + '=([^&#]*)', 'g');
+        resRegex = new RegExp('(.*)=([^&#]*)');
+        results = queries.match(regex);
+
+        if (!results) {
+            return '';
+        }
+        response = results.map(function (result) {
+            let parsed = resRegex.exec(result);
+
+            if (!parsed) {
+                return '';
+            }
+
+            return parsed[2].match(/(^\d+$)/) ? Number(parsed[2]) : parsed[2];
+        });
+
+        return response.length > 1 ? response : response[0];
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = LevelManager;
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EventsManager__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MapManager__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SpriteManager__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PhysicManager__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Player__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Plant__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Enemy__ = __webpack_require__(13);
+
+
+
+
+
+
+
+
+class GameManager{
+    constructor(canvas, ctx,
+                canvasWidth = 800,
+                canvasHeight = 600,
+                plantsCount = 100,
+                enemyCount = 10,
+                enemyLimit = 10,
+                playerGrowIncrement = 1/5,
+                enemyGrowIncrement = 1/3,
+                playerMaxSize = 3,
+                enemyMaxSize = 5,
+                targetPlayerSize = 2.5,
+                map = 'map.json',
+                playerSprite = '1',
+                playerNickname = 'Player') {
+        this.canvas = canvas;
+        this.ctx = ctx;
+        this.canvasWidth = canvasWidth;
+        this.canvasHeight = canvasHeight;
+
+        this.targetPlayerSize = targetPlayerSize;
+
+        this.plantCount = plantsCount;
+        this.enemyCount = enemyCount;
+        this.enemyLimit = enemyLimit;
+        this.playerGrowIncrement = playerGrowIncrement;
+        this.enemyGrowIncrement = enemyGrowIncrement;
+        this.playerMaxSize = playerMaxSize;
+        this.enemyMaxSize = enemyMaxSize;
+
+        this.factory = {};
+        this.entities = [];
+        this.laterKill = [];
+
+        this.mapManager = new __WEBPACK_IMPORTED_MODULE_1__MapManager__["a" /* default */](this.canvasWidth, this.canvasHeight);
+        this.eventsManager = new __WEBPACK_IMPORTED_MODULE_0__EventsManager__["a" /* default */](this.canvas);
+        this.spriteManager = new __WEBPACK_IMPORTED_MODULE_2__SpriteManager__["a" /* default */](this.mapManager);
+        this.physicManager = new __WEBPACK_IMPORTED_MODULE_3__PhysicManager__["a" /* default */]();
+
+        this.player = new __WEBPACK_IMPORTED_MODULE_4__Player__["a" /* default */](this.spriteManager, this.playerGrowIncrement, this.playerMaxSize, playerSprite, playerNickname);
+        this.map = map;
+    }
+
+    initPlayer(obj) {
+        this.player = obj;
+    }
+
+    kill(obj) {
+        this.laterKill.push(obj);
+    }
+
+    update() {
+        if(this.player === null) {
+            //console.log('player has been killed');
+            alert('Вы стали частью чего-то большего.');
+            window.location.search = '';
+            //alert('Вы стали частью чего-то большего');
+            return;
+        } else {
+            //console.log(this.player.size);
+            if(this.player.size >= this.targetPlayerSize) {
+                alert(this.player.nickname + '! You win!!!');
+                window.location.search = "result=win";
+                return;
+            } else {
+                this.player.move_x = 0;
+                this.player.move_y = 0;
+
+                if(this.eventsManager.cursorPositionChanged) {
+                    this.player.move_x = this.mapManager.view.x + this.eventsManager.mouse_x;
+                    this.player.move_y = this.mapManager.view.y + this.eventsManager.mouse_y;
+                    this.player.step(this.player.move_x, this.player.move_y);
+                    //console.log(this.player.pos_x + ' ' + this.player.pos_y);
+                }
+
+                this.plantCount = this.getPlantCount();
+                this.enemyCount = this.getEnemyCount();
+                if(this.plantCount <= this.enemyCount / 2) {
+                    this.generatePlants(this.enemyCount / 2);
+                }
+                if(this.enemyCount < this.enemyLimit) {
+                    this.generateEnemies(1);
+                }
+                //console.log(this.plantCount + ' ' + this.enemyCount);
+
+                this.entities.forEach(function (e) {
+                    try {
+                        e.update(this);
+                    } catch (ex) {}
+                }.bind(this));
+
+                for(let i = 0; i < this.laterKill.length; i++) {
+                    let idx = this.entities.indexOf(this.laterKill[i]);
+                    if(idx > -1) {
+                        this.entities.splice(idx, 1);
+                    }
+                }
+
+                if(this.laterKill.length > 0) {
+                    for(let i = 0; i < this.laterKill.length; i++) {
+                        if(this.laterKill[i].name === 'Player') {
+                            this.player = null;
+                        }
+                    }
+                    this.laterKill.length = 0;
+                }
+                this.updateDashboard();
+                this.draw();
+            }
+        }
+    }
+
+    draw() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.mapManager.centerAt(this.player.pos_x, this.player.pos_y);
+        this.mapManager.draw(this.ctx);
+
+        for(let i = 0; i < this.entities.length; i++) {
+            this.entities[i].draw(this.ctx);
+        }
+    }
+
+    loadAll() {
+        this.mapManager.loadMap(this.map);
+        this.spriteManager.loadAtlas('atlas.json', 'images/spritesheets/spritesheet.png');
+
+        this.factory['Player'] = this.player;
+        this.entities.push(this.player);
+
+        this.generatePlants(this.plantCount);
+        this.generateEnemies(this.enemyCount);
+
+        this.eventsManager.setup();
+
+    }
+
+    play() {
+        setInterval(function () { this.update(); }.bind(this), 10);
+    }
+
+    generatePlants(count) {
+        for(let i = 0; i < count; i++) {
+            let rand_x = Math.floor(Math.random() * Math.max(this.mapManager.mapSize.x, 3200) + 1);
+            let rand_y = Math.floor(Math.random() * Math.max(this.mapManager.mapSize.y, 3200) + 1);
+            this.entities.push(this.factory['Plant'] = new __WEBPACK_IMPORTED_MODULE_5__Plant__["a" /* default */](this.spriteManager, rand_x, rand_y));
+        }
+    }
+
+    generateEnemies(count) {
+        for(let i = 0; i < count; i++) {
+            let rand_x = Math.floor(Math.random() * Math.max(this.mapManager.mapSize.x, 3200) + 1);
+            let rand_y = Math.floor(Math.random() * Math.max(this.mapManager.mapSize.y, 3200) + 1);
+
+            let enemyName = 'Enemy' + i;
+
+            this.entities.push(this.factory[enemyName] =
+                new __WEBPACK_IMPORTED_MODULE_6__Enemy__["a" /* default */](this.spriteManager, rand_x, rand_y, enemyName, this.enemyGrowIncrement, this.enemyMaxSize, generateEnemiesSpriteNumber()));
+        }
+
+        function generateEnemiesSpriteNumber() {
+            return (Math.floor(Math.random() * 4 + 1)).toString();
+        }
+    }
+
+    getPlantCount() {
+        let counter = 0;
+        for(let i = 0; i < this.entities.length; i++) {
+            let e = this.entities[i];
+            if(e.name === 'Plant') {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    getEnemyCount() {
+        let counter = 0;
+        for(let i = 0; i < this.entities.length; i++)
+        {
+            let e = this.entities[i];
+            if(e.name !== 'Plant' && e.name !== 'Player') {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    updateDashboard() {
+        document.getElementById('playerSize').setAttribute('value', this.player.size);
+        document.getElementById('targetPlayerSize').setAttribute('value', this.targetPlayerSize);
+        document.getElementById('plantCount').setAttribute('value', this.plantCount);
+        document.getElementById('enemyCount').setAttribute('value', this.enemyCount);
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = GameManager;
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class EventsManager{
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.mouse_x = 0;
+        this.mouse_y = 0;
+        this.cursorPositionChanged = false;
+    }
+
+    setup() {
+        this.canvas.addEventListener('mousemove', this.onMouseMove.bind(this));
+    }
+
+    onMouseMove(e) {
+        this.mouse_x = e.clientX;
+        this.mouse_y = e.clientY;
+        this.cursorPositionChanged = true;
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = EventsManager;
+
+
+/***/ }),
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 class MapManager{
 
-    constructor() {
+    constructor(width = 800, height = 600) {
         this.mapData = null;
         this.tLayerSand = null;
         this.xCount = 0;
@@ -17318,12 +18025,35 @@ class MapManager{
         this.imgLoadCount = 0;
         this.imgLoaded = false;
         this.jsonLoaded = false;
-        this.view = {x: 0, y: 0, w: 800, h: 600};
-        console.log('Map Manager created');
+        this.view = {x: 0, y: 0, w: width, h: height};
+        //console.log('Map Manager created');
+    }
+
+    loadMap(path) {
+        //console.log('start load = ' + path);
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            //console.log('ready state = ' + request.readyState + '; status = ' + request.status);
+            if(request.readyState === 4 && request.status === 200) {
+                // получен корректный запрос
+                //console.log('request is correct');
+                this.parseMap(request.responseText);
+            }
+        }.bind(this);
+        request.open('GET', path, true);
+        request.send();
+
+        if(this.jsonLoaded && this.imgLoaded) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     parseMap(tilesJSON) {
+        //console.log('start parsing');
         this.mapData = JSON.parse(tilesJSON);
+        //console.log(this.mapData);
         this.xCount = this.mapData.width;
         this.yCount = this.mapData.height;
         this.tSize.x = this.mapData.tilewidth;
@@ -17333,12 +18063,18 @@ class MapManager{
 
         for(let i = 0; i < this.mapData.tilesets.length; i++) {
             let img = new Image();
+            //console.log('new image has already created');
+            //console.log(img.src);
             img.onload = function () {
+                //console.log('load image');
                 this.imgLoadCount++;
                 if(this.imgLoadCount === this.mapData.tilesets.length) {
                     this.imgLoaded = true;
                 }
-            };
+            }.bind(this);
+
+            //console.log(img);
+
             let t = this.mapData.tilesets[i];
             img.src = t.image;
             let ts = {
@@ -17350,31 +18086,20 @@ class MapManager{
             };
             this.tilesets.push(ts);
         }
+        //console.log(this.tilesets);
         this.jsonLoaded = true;
-    }
-
-    loadMap(path) {
-        console.log('start load' + path);
-        let request = new XMLHttpRequest();
-        request.onreadystatechange = function () {
-            console.log('ready state = ' + request.readyState + '; status = ' + request.status);
-            if(request.readyState === 4 && request.status === 200) {
-                // получен корректный запрос
-                console.log('request is correct');
-                this.parseMap(request.responseText);
-            }
-        }.bind(this);
-        request.open('GET', path, true);
-        request.send();
     }
 
 
     draw(ctx) {
-        console.log('start draw');
-        if(!this.imgLoaded|| !this.jsonLoaded) {
+        //console.log('start draw ' + this.imgLoaded + ' ' + this.jsonLoaded);
+        if(!this.imgLoaded || !this.jsonLoaded) {
             setTimeout(function () { this.draw(ctx); }.bind(this), 100);
         } else {
+            //console.log('images and json loaded');
             if(this.tLayerSand === null) {
+                //console.log('layers');
+                //console.log(this.mapData.layers);
                 for(let id = 0; id < this.mapData.layers.length; id++) {
                     let layer = this.mapData.layers[id];
                     if(layer.type === 'tilelayer') {
@@ -17382,23 +18107,26 @@ class MapManager{
                         break;
                     }
                 }
+            }
+            for(let i = 0; i < this.tLayerSand.data.length; i++) {
+                if(this.tLayerSand.data[i] !== 0) {
+                    let tile = this.getTile(this.tLayerSand.data[i]);
+                    //console.log(tile);
+                    let pX = (i % this.xCount) * this.tSize.x;
+                    let pY = Math.floor(i / this.xCount) * this.tSize.y;
 
-                for(let i = 0; i < this.tLayerSand.length; i++) {
-                    if(this.tLayerSand.data[i] !== 0) {
-                        let tile = this.getTile(this.tLayerSand.data[i]);
-                        let pX = (i % this.xCount);
-                        let pY = (i % this.yCount);
-
-                        if(!this.isVisible(pX, pY, this.tSize.x, this.tSize.y)) {
-                            continue;
-                        }
-
-                        pX -= this.view.x;
-                        pY -= this.view.y;
-
-
-                        ctx.drawImage(tile.img, tile.px, tile.py, this.tSize.x, this.tSize.y, pX, pY, this.tSize.x, this.tSize.y);
+                    if(!this.isVisible(pX, pY, this.tSize.x, this.tSize.y)) {
+                        continue;
                     }
+
+                    pX -= this.view.x;
+                    pY -= this.view.y;
+
+                    //console.log('draw');
+                    //console.log(tile.img);
+                    //console.log(pX + ' ' + pY);
+                    ctx.drawImage(tile.img, tile.px, tile.py, this.tSize.x, this.tSize.y, pX, pY, this.tSize.x, this.tSize.y);
+                    //ctx.drawImage(tile.img, tile.px, tile.py, this.tSize.x, this.tSize.y, this.view.x + pX, this.view.y + pY, this.tSize.x, this.tSize.y);
                 }
 
             }
@@ -17432,16 +18160,277 @@ class MapManager{
         return null;
     }
 
-    isVisible(x, t, width, height) {
+    isVisible(x, y, width, height) {
         if(x + width < this.view.x || y + height < this.view.y || x > this.view.x + this.view.w || y > this.view.y + this.view.h) {
             return false;
         } else {
             return true;
         }
     }
+
+    centerAt (x, y) {
+        if(x < this.view.w/2) {
+            this.view.x = 0;
+        } else {
+            if(x > this.mapSize.x - this.view.w/2) {
+                this.view.x = this.mapSize.x - this.view.w;
+            } else {
+                this.view.x = x - (this.view.w/2);
+            }
+        }
+
+        if(y < this.view.h/2) {
+            this.view.y = 0;
+        } else {
+            if(y > this.mapSize.y - this.view.h/2) {
+                this.view.y = this.mapSize.y - this.view.h;
+            } else {
+                this.view.y = y - (this.view.h/2);
+            }
+        }
+        //console.log(this.view.x + ' ' + this.view.y);
+    }
+
+    update(ctx, player_pos_x, player_pos_y) {
+        ctx.clearRect(0, 0, this.view.w, this.view.h);
+        this.draw(ctx);
+        this.centerAt(player_pos_x, player_pos_y);
+    }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = MapManager;
 
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class PhysicManager {
+    constructor() {
+
+    }
+
+    update(obj, gameManager) {
+
+        //console.log('physics update');
+
+        if(obj.move_x === 0 && obj.move_y === 0) {
+            //console.log('stop');
+            return;
+        }
+
+        //let new_x = obj.pos_x + Math.floor(obj.move_x * obj.speed);
+        //let new_y = obj.pos_y + Math.floor(obj.move_y * obj.speed);
+
+        let e = this.entityAtXY(obj, gameManager);
+        if(e !== null) {
+            obj.onTouchEntity(e, gameManager);
+        }
+    }
+
+    entityAtXY(obj, gameManager) {
+        //console.log(x + ' ' + y + ' ' + obj.pos_x + ' ' + obj.pos_y);
+        for (let i = 0; i < gameManager.entities.length; i++) {
+            let e = gameManager.entities[i];
+            if(obj.name !== e.name) {
+                let e_center_x = e.pos_x + e.size_x/2;
+                let e_center_y = e.pos_y + e.size_y/2;
+
+                if((e_center_x >= obj.pos_x) && (e_center_x <= obj.pos_x + obj.size_x) &&
+                    (e_center_y >= obj.pos_y) && (e_center_y <= obj.pos_y + obj.size_y)) {
+                    return e;
+                }
+
+            }
+        }
+        return null;
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = PhysicManager;
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Entity__ = __webpack_require__(0);
+
+
+class Player extends __WEBPACK_IMPORTED_MODULE_0__Entity__["a" /* default */]{
+    constructor(spriteManager, growIncrement = 1/10, maxSize = 10, sprite = '1', nickname='Player') {
+        super(spriteManager);
+        this.healthpoints = 100;
+        this.speed = 2;
+        this.size = 1;
+        this.move_x = 0;
+        this.move_y = 0;
+        this.name = 'Player';
+        this.growIncrement = growIncrement;
+        this.maxSize = maxSize;
+        this.spriteNumber = sprite;
+        this.nickname = nickname;
+    }
+
+
+    /*draw(ctx) {
+        this.spriteManager.drawSprite(ctx, this.spriteNumber, this.pos_x, this.pos_y, this.size);
+    }*/
+
+    update(gameManager) {
+        //console.log('updatePlayer');
+        //console.log(this.mov)
+        //console.log(gameManager);
+        gameManager.physicManager.update(this, gameManager);
+    }
+
+    onTouchEntity (obj, gameManager) {
+        //console.log('touch');
+        if(this.size / 2 >= obj.size) {
+            //console.log('kill obj');
+            let sizeOffset = obj.size * this.growIncrement;
+            if(this.size + sizeOffset <= this.maxSize) {
+                this.size += sizeOffset;
+                this.size_x += sizeOffset;
+                this.size_y += sizeOffset;
+            }
+            obj.kill(gameManager);
+        }
+    }
+
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Player;
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Entity__ = __webpack_require__(0);
+
+
+class Plant extends __WEBPACK_IMPORTED_MODULE_0__Entity__["a" /* default */]{
+    constructor(spriteManager, x, y) {
+        super(spriteManager);
+        this.healthpoints = 1;
+        this.speed = 0;
+        this.pos_x = x;
+        this.pos_y = y;
+        this.size = 0.5;
+        this.name = 'Plant';
+        this.spriteNumber = '0';
+    }
+
+    /*draw(ctx) {
+        this.spriteManager.drawSprite(ctx, this.spriteNumber, this.pos_x, this.pos_y, this.size);
+    }*/
+
+    /*onTouchEntity (obj, gameManager) {
+        if(this.size <= obj.size) {
+            this.kill(gameManager);
+        }
+    }*/
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Plant;
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Entity__ = __webpack_require__(0);
+
+
+class Enemy extends __WEBPACK_IMPORTED_MODULE_0__Entity__["a" /* default */]{
+    constructor(spriteManager, x, y, name, growIncrement = 1/5, maxSize = 10, spriteNumber = '2') {
+        super(spriteManager);
+        this.healthpoints = 100;
+        this.speed = 1;
+        this.pos_x = x;
+        this.pos_y = y;
+        this.size = 1;
+        this.name = name;
+        this.target = null;
+        this.growIncrement = growIncrement;
+        this.maxSize = maxSize;
+        //this.spriteNumber = this.generateSpriteNumber();
+        this.spriteNumber = spriteNumber;
+        this.targetTime = 0;
+    }
+
+    /*draw(ctx) {
+        //console.log(this.spriteNumber);
+        this.spriteManager.drawSprite(ctx, this.spriteNumber, this.pos_x, this.pos_y, this.size);
+        //this.spriteManager.drawSprite(ctx, '2', this.pos_x, this.pos_y, this.size);
+    }*/
+
+    findTarget(gameManager) {
+        if(this.target === null || !this.targetExists(gameManager)) {
+            let rand_target = Math.floor(Math.random() * gameManager.entities.length);
+            if(this.canEat(gameManager.entities[rand_target])) {
+                this.target = gameManager.entities[rand_target];
+            } else {
+                this.findTarget(gameManager);
+            }
+        } else {
+            this.targetTime++;
+            //console.log(this.targetTime);
+            if(this.targetTime >= 2500) {
+                this.target = null;
+                this.targetTime = 0;
+            }
+        }
+    }
+
+    canEat(obj) {
+        if(this.size / 2 >= obj.size) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    targetExists(gameManager) {
+        for(let i = 0; i < gameManager.entities.length; i++) {
+            let e = gameManager.entities[i];
+            if(this.target.pos_x === e.pos_x && this.target.pos_y === e.pos_y) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    update(gameManager) {
+        //console.log(e.pos_x + ' ' + e.pos_y);
+
+        this.findTarget(gameManager);
+
+        this.step(this.target.pos_x, this.target.pos_y);
+        //console.log(this.pos_x + ' ' + this.pos_y);
+
+        gameManager.physicManager.update(this, gameManager);
+    }
+
+
+    onTouchEntity (obj, gameManager) {
+        //console.log('touch');
+        if(this.size / 2 >= obj.size) {
+            //console.log('kill obj');
+            let sizeOffset = obj.size * this.growIncrement;
+            if(this.size + sizeOffset <= this.maxSize) {
+                this.size += sizeOffset;
+                this.size_x += sizeOffset;
+                this.size_y += sizeOffset;
+                this.target = null;
+            }
+            obj.kill(gameManager);
+        }
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Enemy;
 
 
 /***/ })
