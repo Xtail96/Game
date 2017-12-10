@@ -17,8 +17,9 @@ export default class Player extends Entity{
 
 
     draw(ctx) {
+        let offset = 7 * this.size;
         this.spriteManager.drawSprite(ctx, this.spriteNumber, this.pos_x, this.pos_y, this.size);
-        this.spriteManager.drawSprite(ctx, '1', this.pos_x, this.pos_y, this.size);
+        this.spriteManager.drawSprite(ctx, '1', this.pos_x - offset, this.pos_y - offset, this.size);
     }
 
     update(gameManager) {
