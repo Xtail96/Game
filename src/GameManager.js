@@ -18,7 +18,8 @@ export default class GameManager{
                 playerMaxSize = 3,
                 enemyMaxSize = 5,
                 targetPlayerSize = 2.5,
-                map = 'map.json') {
+                map = 'map.json',
+                playerSprite = '1') {
         this.canvas = canvas;
         this.ctx = ctx;
         this.canvasWidth = canvasWidth;
@@ -43,7 +44,7 @@ export default class GameManager{
         this.spriteManager = new SpriteManager(this.mapManager);
         this.physicManager = new PhysicManager();
 
-        this.player = new Player(this.spriteManager, this.playerGrowIncrement, this.playerMaxSize);
+        this.player = new Player(this.spriteManager, this.playerGrowIncrement, this.playerMaxSize, playerSprite);
         this.map = map;
     }
 
@@ -163,7 +164,7 @@ export default class GameManager{
         }
 
         function generateEnemiesSpriteNumber() {
-            return (Math.floor(Math.random() * 3 + 2)).toString();
+            return (Math.floor(Math.random() * 3 + 1)).toString();
         }
     }
 

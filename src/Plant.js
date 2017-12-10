@@ -9,7 +9,7 @@ export default class Plant extends Entity{
         this.pos_y = y;
         this.size = 0.5;
         this.name = 'Plant';
-        this.spriteNumber = '1';
+        this.spriteNumber = '0';
     }
 
     /*draw(ctx) {

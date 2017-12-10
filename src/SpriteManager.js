@@ -41,7 +41,7 @@ export default class SpriteManager {
             setTimeout(function () { this.drawSprite(ctx, name , x, y, size); }.bind(this), 100);
         } else {
             let sprite = this.getSprite(name);
-            console.log(name);
+            //console.log(name);
             if(!this.mapManager.isVisible(x, y, sprite.w, sprite.h)) {
                 return;
             }

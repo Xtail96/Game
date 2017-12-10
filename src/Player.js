@@ -1,7 +1,7 @@
 import Entity from "./Entity"
 
 export default class Player extends Entity{
-    constructor(spriteManager, growIncrement = 1/10, maxSize = 10) {
+    constructor(spriteManager, growIncrement = 1/10, maxSize = 10, sprite = '1') {
         super(spriteManager);
         this.healthpoints = 100;
         this.speed = 2;
@@ -11,7 +11,7 @@ export default class Player extends Entity{
         this.name = 'Player';
         this.growIncrement = growIncrement;
         this.maxSize = maxSize;
-        this.spriteNumber = '0';
+        this.spriteNumber = sprite;
     }
 
 
