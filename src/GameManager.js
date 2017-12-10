@@ -68,7 +68,7 @@ export default class GameManager{
             //console.log(this.player.size);
             if(this.player.size >= this.targetPlayerSize) {
                 alert(this.player.nickname + '! You win!!!');
-                window.location.search = "result=win";
+                window.location.search = '';
                 return;
             } else {
                 this.player.move_x = 0;
@@ -166,7 +166,7 @@ export default class GameManager{
         }
 
         function generateEnemiesSpriteNumber() {
-            return (Math.floor(Math.random() * 4 + 1)).toString();
+            return (Math.floor(Math.random() * 4 + 2)).toString();
         }
     }
 

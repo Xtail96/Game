@@ -309,6 +309,21 @@ function startLevel() {
     let playerSprite = document.getElementById('playerSpriteInput').value.toString();
     let level = document.getElementById('levelInput').value.toString();
 
+    switch (playerSprite) {
+        case '1':
+            playerSprite = '2';
+            break;
+        case '2':
+            playerSprite = '3';
+            break;
+        case '3':
+            playerSprite = '4';
+            break;
+        case '4':
+            playerSprite = '5';
+            break;
+    }
+
     window.location.search = '?playerNickname=' + playerNickname + '&playerSprite=' + playerSprite + '&level=' + level ;
 }
 
