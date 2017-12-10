@@ -19,12 +19,17 @@ export default class LevelManager {
             playerSprite = '1';
         }
 
+        let playerName = this.getParam('playerNickname').toString();
+        if(playerName === '') {
+            playerName = 'Player';
+        }
+
         //console.log(levelNumber);
 
         switch (levelNumber) {
             case 1:
                 this.gameManager =
-                    new GameManager(this.canvas, this.context, this.canvas.width, this.canvas.height, 10, 100, 5, 1/10, 1/25, 5, 7, 3, 'level_1_map.json', playerSprite);
+                    new GameManager(this.canvas, this.context, this.canvas.width, this.canvas.height, 10, 100, 5, 1/10, 1/25, 5, 7, 3, 'level_1_map.json', playerSprite, playerName);
                 break;
             case 2:
                 this.gameManager =

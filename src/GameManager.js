@@ -19,7 +19,8 @@ export default class GameManager{
                 enemyMaxSize = 5,
                 targetPlayerSize = 2.5,
                 map = 'map.json',
-                playerSprite = '1') {
+                playerSprite = '1',
+                playerNickname = 'Player') {
         this.canvas = canvas;
         this.ctx = ctx;
         this.canvasWidth = canvasWidth;
@@ -44,7 +45,7 @@ export default class GameManager{
         this.spriteManager = new SpriteManager(this.mapManager);
         this.physicManager = new PhysicManager();
 
-        this.player = new Player(this.spriteManager, this.playerGrowIncrement, this.playerMaxSize, playerSprite);
+        this.player = new Player(this.spriteManager, this.playerGrowIncrement, this.playerMaxSize, playerSprite, playerNickname);
         this.map = map;
     }
 
@@ -65,7 +66,7 @@ export default class GameManager{
         } else {
             //console.log(this.player.size);
             if(this.player.size >= this.targetPlayerSize) {
-                alert('You win!!!');
+                alert(this.player.nickname + '! You win!!!');
                 window.location.href = "/win";
                 return;
             }
