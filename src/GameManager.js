@@ -59,10 +59,9 @@ export default class GameManager{
 
     update() {
         if(this.player === null) {
-            console.log('player has been killed');
-            alert(this.player.nickname + '! Вы стали частью чего-то большего.');
-            window.location.search = "result=loose";
-            window.reloadApp();
+            //console.log('player has been killed');
+            alert('Вы стали частью чего-то большего.');
+            window.location.search = '';
             //alert('Вы стали частью чего-то большего');
             return;
         } else {

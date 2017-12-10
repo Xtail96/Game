@@ -183,13 +183,6 @@ function createDashboard() {
     return elements;
 }
 
-
-if(window.location.search==='') {
-    initPreview();
-} else {
-    initGameField();
-}
-
 function initPreview() {
     let startMenu = document.createElement('div');
     startMenu.id = 'startMenu';
@@ -317,4 +310,23 @@ function startLevel() {
     let level = document.getElementById('levelInput').value.toString();
 
     window.location.search = '?playerNickname=' + playerNickname + '&playerSprite=' + playerSprite + '&level=' + level ;
+}
+
+console.log(window.location.search);
+if(window.location.search === '') {
+    initPreview();
+} else {
+    if(window.location.search === '?result=win') {
+        initWinPage();
+    } else {
+        initGameField();
+    }
+}
+
+function initWinPage() {
+    alert('win!');
+}
+
+function initLoosePage() {
+   alert('loose(');
 }
