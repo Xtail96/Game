@@ -47,6 +47,10 @@ export default class GameManager{
 
         this.player = new Player(this.spriteManager, this.playerGrowIncrement, this.playerMaxSize, playerSprite, playerNickname);
         this.map = map;
+
+        this.hours = 0;
+        this.minutes = 0;
+        this.seconds = 0;
     }
 
     initPlayer(obj) {
@@ -67,7 +71,7 @@ export default class GameManager{
         } else {
             //console.log(this.player.size);
             if(this.player.size >= this.targetPlayerSize) {
-                alert(this.player.nickname + '! You win!!!');
+                alert(this.player.nickname + '! You win in ' + this.hours + ':' + this.minutes + ':' + this.seconds);
                 window.location.search = '';
                 return;
             } else {
@@ -144,6 +148,7 @@ export default class GameManager{
 
     play() {
         setInterval(function () { this.update(); }.bind(this), 10);
+        this.start_timer();
     }
 
     generatePlants(count) {
@@ -199,4 +204,24 @@ export default class GameManager{
         document.getElementById('plantCount').setAttribute('value', this.plantCount);
         document.getElementById('enemyCount').setAttribute('value', this.enemyCount);
     }
+
+    start_timer() {
+
+        //$('.timer').text('00:00:00')
+        //let timer = document.getElementById('timer').textContent = '00:00:00';
+        let this_date = new Date();
+        //clearInterval(start_time_interval);
+        setInterval(function(){
+            let new_date = new Date() - this_date;
+            this.seconds = Math.abs(Math.floor(new_date/1000)%60); //sek
+            this.minutes   = Math.abs(Math.floor(new_date/1000/60)%60); //min
+            this.hours = Math.abs(Math.floor(new_date/1000/60/60)%24); //hours
+            if (this.seconds.toString().length   === 1) this.seconds   = '0' + this.seconds;
+            if (this.minutes.toString().length   === 1) this.minutes   = '0' + this.minutes;
+            if (this.hours.toString().length === 1) this.hours = '0' + this.hours;
+            //$('.timer').text(hours + ':' + min + ':' + sec);
+            document.getElementById('timer').textContent = this.hours + ':' + this.minutes + ':' + this.seconds;
+        }.bind(this),100);
+
+    };
 }

@@ -180,6 +180,13 @@ function createDashboard() {
     enemyCount.style.width = 100;
     elements.push(enemyCount);
 
+
+    let timer = document.createElement('b');
+    timer.id = 'timer';
+    timer.style.marginRight = '10px';
+    timer.style.float = 'right';
+    elements.push(timer);
+
     return elements;
 }
 
