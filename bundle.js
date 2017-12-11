@@ -388,6 +388,13 @@ function createDashboard() {
     enemyCount.style.width = 100;
     elements.push(enemyCount);
 
+
+    let timer = document.createElement('b');
+    timer.id = 'timer';
+    timer.style.marginRight = '10px';
+    timer.style.float = 'right';
+    elements.push(timer);
+
     return elements;
 }
 
@@ -517,8 +524,24 @@ function startLevel() {
     let playerSprite = document.getElementById('playerSpriteInput').value.toString();
     let level = document.getElementById('levelInput').value.toString();
 
+    switch (playerSprite) {
+        case '1':
+            playerSprite = '2';
+            break;
+        case '2':
+            playerSprite = '3';
+            break;
+        case '3':
+            playerSprite = '4';
+            break;
+        case '4':
+            playerSprite = '5';
+            break;
+    }
+
     window.location.search = '?playerNickname=' + playerNickname + '&playerSprite=' + playerSprite + '&level=' + level ;
 }
+
 
 console.log(window.location.search);
 if(window.location.search === '') {
@@ -532,12 +555,77 @@ if(window.location.search === '') {
 }
 
 function initWinPage() {
-    alert('win!');
+    //alert('win!');
+    let resultsContainer = document.createElement('div');
+    resultsContainer.id = 'resultsContainer';
+    resultsContainer.style.width = '500px';
+    resultsContainer.style.height = 'auto';
+    resultsContainer.style.marginTop = '50px';
+    resultsContainer.style.marginLeft = 'auto';
+    resultsContainer.style.marginRight = 'auto';
+    resultsContainer.style.padding = '10px';
+    resultsContainer.style.backgroundColor = '#eee';
+    resultsContainer.style.border = '1px solid #dfdfdf';
+    resultsContainer.style.borderRadius = '5px';
+
+    let resultsHeader = document.createElement('h1');
+    resultsHeader.id = 'resultsHeader';
+    resultsHeader.textContent = 'Results';
+    resultsContainer.appendChild(resultsHeader);
+
+    let resultsList = document.createElement('ul');
+    resultsList.style.padding = '10px';
+    resultsList.style.listStyleType = 'none';
+
+    let localStorage = window.localStorage;
+    console.log(localStorage.length);
+    for(let i = 0; i < localStorage.length; i++) {
+        let item = window.localStorage.getItem(i.toString());
+        console.log(item);
+        if(item !== null) {
+            let li = document.createElement('li');
+            li.style.padding = '10px';
+            li.style.marginTop = '5px';
+            li.style.marginBottom = '5px';
+            li.style.backgroundColor = '#fff';
+            li.style.border = '2px solid #46AF46';
+            //li.style.border = '1px solid #dfdfdf';
+            li.style.borderRadius = '5px';
+            li.textContent = item;
+            resultsList.appendChild(li);
+        }
+    }
+
+    resultsContainer.appendChild(resultsList);
+
+    let clearResultsButton = document.createElement('input');
+    clearResultsButton.id = 'clearResultsButton';
+    clearResultsButton.type = 'submit';
+    clearResultsButton.value = 'Clear All';
+    clearResultsButton.onclick = function () {
+        clearResults();
+        window.location.href = window.location.pathname + window.location.search + window.location.hash;
+    };
+    clearResultsButton.style.width = '100%';
+    clearResultsButton.style.padding = '5px';
+    clearResultsButton.style.fontSize = '200%';
+    clearResultsButton.style.color = '#fff';
+    clearResultsButton.style.backgroundColor = '#46AF46';
+    clearResultsButton.style.border = '1px solid transparent';
+    clearResultsButton.style.borderRadius = '5px';
+    clearResultsButton.style.cursor = 'pointer';
+    resultsContainer.appendChild(clearResultsButton);
+
+
+    document.body.appendChild(resultsContainer);
+
+    function clearResults() {
+        for(let i = 0; i < localStorage.length; i++) {
+            localStorage.removeItem(i.toString());
+        }
+    }
 }
 
-function initLoosePage() {
-   alert('loose(');
-}
 
 /***/ }),
 /* 3 */
@@ -17825,6 +17913,12 @@ class GameManager{
 
         this.player = new __WEBPACK_IMPORTED_MODULE_4__Player__["a" /* default */](this.spriteManager, this.playerGrowIncrement, this.playerMaxSize, playerSprite, playerNickname);
         this.map = map;
+
+        this.hours = 0;
+        this.minutes = 0;
+        this.seconds = 0;
+        this.storage = window.localStorage;
+        this.saved = false;
     }
 
     initPlayer(obj) {
@@ -17845,8 +17939,14 @@ class GameManager{
         } else {
             //console.log(this.player.size);
             if(this.player.size >= this.targetPlayerSize) {
-                alert(this.player.nickname + '! You win!!!');
-                window.location.search = "result=win";
+                let currentTime = this.getCurrentTime();
+                alert(this.player.nickname + '! You win in ' + currentTime);
+                if(!this.saved) {
+                    let key = this.storage.length;
+                    this.storage.setItem(key.toString(), this.player.nickname + ' win in time = ' + currentTime + ' with size = ' + this.player.size);
+                    window.location.search = '?result=win';
+                    this.saved = true;
+                }
                 return;
             } else {
                 this.player.move_x = 0;
@@ -17922,6 +18022,7 @@ class GameManager{
 
     play() {
         setInterval(function () { this.update(); }.bind(this), 10);
+        this.start_timer();
     }
 
     generatePlants(count) {
@@ -17944,7 +18045,7 @@ class GameManager{
         }
 
         function generateEnemiesSpriteNumber() {
-            return (Math.floor(Math.random() * 4 + 1)).toString();
+            return (Math.floor(Math.random() * 4 + 2)).toString();
         }
     }
 
@@ -17976,6 +18077,30 @@ class GameManager{
         document.getElementById('targetPlayerSize').setAttribute('value', this.targetPlayerSize);
         document.getElementById('plantCount').setAttribute('value', this.plantCount);
         document.getElementById('enemyCount').setAttribute('value', this.enemyCount);
+    }
+
+    start_timer() {
+
+        //$('.timer').text('00:00:00')
+        //let timer = document.getElementById('timer').textContent = '00:00:00';
+        let this_date = new Date();
+        //clearInterval(start_time_interval);
+        setInterval(function(){
+            let new_date = new Date() - this_date;
+            this.seconds = Math.abs(Math.floor(new_date/1000)%60); //sek
+            this.minutes   = Math.abs(Math.floor(new_date/1000/60)%60); //min
+            this.hours = Math.abs(Math.floor(new_date/1000/60/60)%24); //hours
+            if (this.seconds.toString().length   === 1) this.seconds   = '0' + this.seconds;
+            if (this.minutes.toString().length   === 1) this.minutes   = '0' + this.minutes;
+            if (this.hours.toString().length === 1) this.hours = '0' + this.hours;
+            //$('.timer').text(hours + ':' + min + ':' + sec);
+            document.getElementById('timer').textContent = this.getCurrentTime();
+        }.bind(this),100);
+
+    };
+
+    getCurrentTime() {
+        return this.hours + ':' + this.minutes + ':' + this.seconds;
     }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = GameManager;
@@ -18259,7 +18384,7 @@ class PhysicManager {
 
 
 class Player extends __WEBPACK_IMPORTED_MODULE_0__Entity__["a" /* default */]{
-    constructor(spriteManager, growIncrement = 1/10, maxSize = 10, sprite = '1', nickname='Player') {
+    constructor(spriteManager, growIncrement = 1/10, maxSize = 10, sprite = '2', nickname='Player') {
         super(spriteManager);
         this.healthpoints = 100;
         this.speed = 2;
@@ -18274,9 +18399,11 @@ class Player extends __WEBPACK_IMPORTED_MODULE_0__Entity__["a" /* default */]{
     }
 
 
-    /*draw(ctx) {
+    draw(ctx) {
+        let offset = 7 * this.size;
         this.spriteManager.drawSprite(ctx, this.spriteNumber, this.pos_x, this.pos_y, this.size);
-    }*/
+        this.spriteManager.drawSprite(ctx, '1', this.pos_x - offset, this.pos_y - offset, this.size);
+    }
 
     update(gameManager) {
         //console.log('updatePlayer');
