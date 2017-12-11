@@ -348,23 +348,72 @@ if(window.location.search === '') {
 
 function initWinPage() {
     //alert('win!');
+    let resultsContainer = document.createElement('div');
+    resultsContainer.id = 'resultsContainer';
+    resultsContainer.style.width = '500px';
+    resultsContainer.style.height = 'auto';
+    resultsContainer.style.marginTop = '50px';
+    resultsContainer.style.marginLeft = 'auto';
+    resultsContainer.style.marginRight = 'auto';
+    resultsContainer.style.padding = '10px';
+    resultsContainer.style.backgroundColor = '#eee';
+    resultsContainer.style.border = '1px solid #dfdfdf';
+    resultsContainer.style.borderRadius = '5px';
+
     let resultsHeader = document.createElement('h1');
     resultsHeader.id = 'resultsHeader';
     resultsHeader.textContent = 'Results';
-    document.body.appendChild(resultsHeader);
+    resultsContainer.appendChild(resultsHeader);
 
     let resultsList = document.createElement('ul');
+    resultsList.style.padding = '10px';
+    resultsList.style.listStyleType = 'none';
 
     let localStorage = window.localStorage;
+    console.log(localStorage.length);
     for(let i = 0; i < localStorage.length; i++) {
-        let li = document.createElement('li');
-        li.textContent = window.localStorage.getItem(i.toString());
-        resultsList.appendChild(li);
+        let item = window.localStorage.getItem(i.toString());
+        console.log(item);
+        if(item !== null) {
+            let li = document.createElement('li');
+            li.style.padding = '10px';
+            li.style.marginTop = '5px';
+            li.style.marginBottom = '5px';
+            li.style.backgroundColor = '#fff';
+            li.style.border = '2px solid #46AF46';
+            //li.style.border = '1px solid #dfdfdf';
+            li.style.borderRadius = '5px';
+            li.textContent = item;
+            resultsList.appendChild(li);
+        }
     }
 
-    document.body.appendChild(resultsList);
-}
+    resultsContainer.appendChild(resultsList);
 
-function initLoosePage() {
-   alert('loose(');
+    let clearResultsButton = document.createElement('input');
+    clearResultsButton.id = 'clearResultsButton';
+    clearResultsButton.type = 'submit';
+    clearResultsButton.value = 'Clear All';
+    clearResultsButton.onclick = function () {
+        clearResults();
+        window.location.href = window.location.pathname + window.location.search + window.location.hash;
+    };
+    clearResultsButton.style.width = '100%';
+    clearResultsButton.style.padding = '5px';
+    clearResultsButton.style.fontSize = '200%';
+    clearResultsButton.style.color = '#fff';
+    clearResultsButton.style.backgroundColor = '#46AF46';
+    clearResultsButton.style.border = '1px solid transparent';
+    clearResultsButton.style.borderRadius = '5px';
+    clearResultsButton.style.cursor = 'pointer';
+    resultsContainer.appendChild(clearResultsButton);
+
+
+    document.body.appendChild(resultsContainer);
+
+    function clearResults() {
+        for(let i = 0; i < localStorage.length; i++) {
+            localStorage.removeItem(i.toString());
+        }
+    }
 }
