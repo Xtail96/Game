@@ -71,7 +71,7 @@ export default class GameManager{
         } else {
             //console.log(this.player.size);
             if(this.player.size >= this.targetPlayerSize) {
-                alert(this.player.nickname + '! You win in ' + this.hours + ':' + this.minutes + ':' + this.seconds);
+                alert(this.player.nickname + '! You win in ' + this.getCurrentTime());
                 window.location.search = '';
                 return;
             } else {
@@ -220,8 +220,12 @@ export default class GameManager{
             if (this.minutes.toString().length   === 1) this.minutes   = '0' + this.minutes;
             if (this.hours.toString().length === 1) this.hours = '0' + this.hours;
             //$('.timer').text(hours + ':' + min + ':' + sec);
-            document.getElementById('timer').textContent = this.hours + ':' + this.minutes + ':' + this.seconds;
+            document.getElementById('timer').textContent = this.getCurrentTime();
         }.bind(this),100);
 
     };
+
+    getCurrentTime() {
+        return this.hours + ':' + this.minutes + ':' + this.seconds;
+    }
 }
