@@ -1,10 +1,12 @@
 import GameManager from "./GameManager"
+import SoundManager from "./SoundManager"
 
 export default class LevelManager {
     constructor(canvas, context) {
         this.canvas = canvas;
         this.context = context;
         this.gameManager = null;
+        this.soundManager = null;
     }
 
     getLevelNumber() {
@@ -41,6 +43,18 @@ export default class LevelManager {
             this.gameManager.loadAll();
             this.gameManager.play();
         }
+
+
+        this.soundManager = new SoundManager(this.gameManager);
+        this.soundManager.init();
+        this.soundManager.loadArray([
+            '/sound/1.mp3'
+        ]);
+        this.soundManager.play('/sound/1.mp3');
+        setTimeout(function () {
+            this.soundManager.play('/sound/1.mp3');
+        }.bind(this), 120000);
+
     }
 
 

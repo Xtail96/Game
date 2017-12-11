@@ -20,7 +20,8 @@ export default class GameManager{
                 targetPlayerSize = 2.5,
                 map = 'map.json',
                 playerSprite = '1',
-                playerNickname = 'Player') {
+                playerNickname = 'Player',
+                level = '1') {
         this.canvas = canvas;
         this.ctx = ctx;
         this.canvasWidth = canvasWidth;
@@ -53,6 +54,7 @@ export default class GameManager{
         this.seconds = 0;
         this.storage = window.localStorage;
         this.saved = false;
+        this.level = level;
     }
 
     initPlayer(obj) {
@@ -77,7 +79,7 @@ export default class GameManager{
                 alert(this.player.nickname + '! You win in ' + currentTime);
                 if(!this.saved) {
                     let key = this.storage.length;
-                    this.storage.setItem(key.toString(), this.player.nickname + ' win in time = ' + currentTime + ' with size = ' + this.player.size);
+                    this.storage.setItem(key.toString(), this.player.nickname + ' complete level #' + this.level + ' in time = ' + currentTime + ' with size = ' + this.player.size);
                     window.location.search = '?result=win';
                     this.saved = true;
                 }
@@ -151,7 +153,6 @@ export default class GameManager{
         this.generateEnemies(this.enemyCount);
 
         this.eventsManager.setup();
-
     }
 
     play() {

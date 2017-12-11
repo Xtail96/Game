@@ -335,7 +335,7 @@ function startLevel() {
 }
 
 
-console.log(window.location.search);
+//console.log(window.location.search);
 if(window.location.search === '') {
     initPreview();
 } else {
