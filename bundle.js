@@ -17846,7 +17846,7 @@ class GameManager{
             //console.log(this.player.size);
             if(this.player.size >= this.targetPlayerSize) {
                 alert(this.player.nickname + '! You win!!!');
-                window.location.search = '';
+                window.location.search = "result=win";
                 return;
             } else {
                 this.player.move_x = 0;
