@@ -31,11 +31,11 @@ export default class LevelManager {
         switch (levelNumber) {
             case 1:
                 this.gameManager =
-                    new GameManager(this.canvas, this.context, this.canvas.width, this.canvas.height, 10, 100, 5, 1/10, 1/25, 5, 7, 3, 'level_1_map.json', playerSprite, playerName);
+                    new GameManager(this.canvas, this.context, this.canvas.width, this.canvas.height, 10, 100, 5, 1/10, 1/25, 5, 7, 3, 'level_1_map.json', playerSprite, playerName, '1');
                 break;
             case 2:
                 this.gameManager =
-                    new GameManager(this.canvas, this.context, this.canvas.width, this.canvas.height, 5, 10, 5, 1/25, 1/2, 6, 12, 5, 'level_2_map.json', playerSprite);
+                    new GameManager(this.canvas, this.context, this.canvas.width, this.canvas.height, 5, 50, 5, 1/5, 1/2, 10, 12, 5, 'level_2_map.json', playerSprite, playerName, '2');
                 break;
         }
 
@@ -51,9 +51,9 @@ export default class LevelManager {
             '/sound/1.mp3'
         ]);
         this.soundManager.play('/sound/1.mp3');
-        setTimeout(function () {
+        /*setTimeout(function () {
             this.soundManager.play('/sound/1.mp3');
-        }.bind(this), 120000);
+        }.bind(this), 120000)*/;
 
     }
 

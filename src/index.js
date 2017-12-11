@@ -408,6 +408,24 @@ function initWinPage() {
     clearResultsButton.style.cursor = 'pointer';
     resultsContainer.appendChild(clearResultsButton);
 
+    let homeButton = document.createElement('input');
+    homeButton.id = 'clearResultsButton';
+    homeButton.type = 'button';
+    homeButton.value = 'Home';
+    homeButton.onclick = function () {
+        window.location.search = '';
+    };
+    homeButton.style.width = '100%';
+    homeButton.style.padding = '5px';
+    homeButton.style.fontSize = '200%';
+    homeButton.style.color = '#fff';
+    homeButton.style.backgroundColor = '#46AF46';
+    homeButton.style.border = '1px solid transparent';
+    homeButton.style.borderRadius = '5px';
+    homeButton.style.cursor = 'pointer';
+    homeButton.style.marginTop = '5px';
+    resultsContainer.appendChild(homeButton);
+
 
     document.body.appendChild(resultsContainer);
 
