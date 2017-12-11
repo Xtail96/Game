@@ -334,6 +334,7 @@ function startLevel() {
     window.location.search = '?playerNickname=' + playerNickname + '&playerSprite=' + playerSprite + '&level=' + level ;
 }
 
+
 console.log(window.location.search);
 if(window.location.search === '') {
     initPreview();
@@ -346,7 +347,22 @@ if(window.location.search === '') {
 }
 
 function initWinPage() {
-    alert('win!');
+    //alert('win!');
+    let resultsHeader = document.createElement('h1');
+    resultsHeader.id = 'resultsHeader';
+    resultsHeader.textContent = 'Results';
+    document.body.appendChild(resultsHeader);
+
+    let resultsList = document.createElement('ul');
+
+    let localStorage = window.localStorage;
+    for(let i = 0; i < localStorage.length; i++) {
+        let li = document.createElement('li');
+        li.textContent = window.localStorage.getItem(i.toString());
+        resultsList.appendChild(li);
+    }
+
+    document.body.appendChild(resultsList);
 }
 
 function initLoosePage() {

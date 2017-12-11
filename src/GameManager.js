@@ -51,6 +51,8 @@ export default class GameManager{
         this.hours = 0;
         this.minutes = 0;
         this.seconds = 0;
+        this.storage = window.localStorage;
+        this.saved = false;
     }
 
     initPlayer(obj) {
@@ -71,8 +73,14 @@ export default class GameManager{
         } else {
             //console.log(this.player.size);
             if(this.player.size >= this.targetPlayerSize) {
-                alert(this.player.nickname + '! You win in ' + this.getCurrentTime());
-                window.location.search = '';
+                let currentTime = this.getCurrentTime();
+                alert(this.player.nickname + '! You win in ' + currentTime);
+                if(!this.saved) {
+                    let key = this.storage.length;
+                    this.storage.setItem(key.toString(), this.player.nickname + ' win in time = ' + currentTime + ' with size = ' + this.player.size);
+                    window.location.search = '?result=win';
+                    this.saved = true;
+                }
                 return;
             } else {
                 this.player.move_x = 0;
